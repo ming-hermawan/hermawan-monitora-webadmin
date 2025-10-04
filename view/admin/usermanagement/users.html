@@ -1,0 +1,71 @@
+{{define "head-form-normal"}}
+<link rel="stylesheet" href="/static/css/tmpl/filter/group.css">
+<link rel="stylesheet" href="/static/css/tmpl/base/chkbox.css">
+<link rel="stylesheet" href="/static/css/admin/users-management/users.css">
+<script src="/static/js/tmpl/filter/group.js"></script>
+<script src="/static/js/admin/usermanagement/users.js"></script>
+{{end}}
+{{define "body-form-inp"}}
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-125" for="username">Username</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input type="text"
+             id="username"
+             class="h-inp h-inp-text"
+             pattern="[A-Za-z0-9\x2D]*"
+             title="Allowed characters are alphabetic, digit, or hyphen(-)"
+      />
+    </div>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="password">Password</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input id="password"
+             type="password"
+             class="h-inp h-inp-text"
+      />
+    </div>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="passwordconfirm">Password Confirmation</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input type="password"
+             class="h-inp h-inp-text"
+             id="passwordconfirm"
+             disabled
+      />
+    </div>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="name">Name</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input class="h-inp h-inp-text" type="text" id="name"/>
+    </div>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="email">Email</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input class="h-inp h-inp-text" type="email" id="email"/>
+    </div>
+</div>
+<div class="row">
+    <label class="h-inp-chkbox" for="isAdmin">Admin
+      <input class="h-inp" type="checkbox" id="isAdmin" value="0"/>
+      <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+    </label>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="group">Group</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <select class="form-select h-inp" id="group" name="group"></select>
+    </div>
+</div>
+{{end}}
+{{define "input-form-2col-base-hidden"}}
+<input id="username0"/>
+<input id="password0"/>
+<input id="name0"/>
+<input id="email0"/>
+<input id="isAdmin0"/>
+<input id="group0"/>
+{{end}}

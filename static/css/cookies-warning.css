@@ -1,0 +1,24 @@
+#divInnerBody {
+    margin: 0;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    height: 100%;
+    overflow: auto;
+}
+#divMainContent {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media (min-width: 768px) {
+    #divInnerBody {
+        height: 100%;
+    }
+    #divMainContent {
+        min-width: 450px;
+    }
+}

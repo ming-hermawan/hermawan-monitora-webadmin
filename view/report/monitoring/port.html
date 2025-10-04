@@ -1,0 +1,28 @@
+{{define "head"}}
+<link rel="stylesheet" href="/static/css/report/monitoring/port.css">
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script src="/static/js/report/monitoring/port.js"></script>
+{{end}}
+{{define "body"}}
+<div id="divInnerBody">
+  <div id="divMainBox" class="div-box-out">
+    <div class="div-box-in">
+      <form id="formInput" action="/report/monitoring/port/report" method="get">
+        <div id="divInput" class="form-inp">
+            <div class="lbl div-from">From</div>
+            <div class="div-inp-date"><input class="h-inp inp-date" type="text" id="from" name="from"/></div>
+            <div class="lbl div-to">To</div>
+            <div class="div-inp-date"><input class="h-inp inp-date" type="text" id="to" name="to"/></div>
+            <div class="div-submit"><input type="submit" class="btn btn-primary" value="Get CSV"/></div>
+            <div class="div-clear"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="divNote">
+NOTE: Sorry for this very simple report, please support this application so I can make the coolest report for this application.
+  </div>
+</div>
+{{end}}
+{{define "hidden"}}
+{{end}}

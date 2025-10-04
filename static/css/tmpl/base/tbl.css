@@ -1,0 +1,131 @@
+table {
+    border-collapse: collapse;
+    width: auto;
+}
+table, tbody, tr, th, td {
+    border: none;
+    border-spacing : 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.div-tbl {
+    width: 100%;
+    border: 1px solid #ffffff;
+    background-color: #e3e3e3;
+}
+.div-tbl > table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+
+.tbody > tr > th > div {
+  width: 100%;
+  padding: 9px;
+  background-image: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 50%, #e0e0e0 100%);
+  color: #000000;
+  font-size: 1rem;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  text-align: center;
+}
+.tbody > tr > .td-border {
+  background-color: #ffffff;
+  width: 1px;
+}
+.tbody > tr > td > .div-border {
+  background-color: #ffffff;
+  width: 1px;
+}
+.tbody > tr > .td-chkbox {
+  width: 39px;
+}
+.tbody > tr > td > .div-chkbox {
+  float: left;
+  border-top: 0;
+  border-bottom: 1px solid #bfbfbf;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  width: 42px;
+  height: 42px;
+}
+.tbody > tr > td > .div-chkbox-right-border {
+  float: left;
+  border-left: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  background-color: #ffffff;
+  width: 3px;
+  height: 42px;
+}
+.tbody > tr > td > .div-normal {
+  border-top: 0;
+  border-bottom: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  padding: 9px;
+  font-size: 20px;
+}
+.tbody > tr:nth-child(odd) .div-normal, .tbody > tr:nth-child(odd) .div-chkbox {
+  background-color: #f0ffff;
+}
+.tbody > tr:nth-child(even) .div-normal, .tbody > tr:nth-child(even) .div-chkbox {
+  background-color: #f7f7f7;
+}
+.tbody > tr > td > .div-highlight {
+  border-top: 0;
+  border-bottom: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  padding: 9px;
+  background-color: #800000;
+  color: #ffffff;
+}
+.tbody > tr > td:last-child > div {
+  border-right: 0;
+}
+.tbody > tr > .td-select > div {
+  font-size: 20px;
+  height: 43px;
+}
+.tbody > tr > .th-chkbox {
+  width: 45px;
+}
+@media (min-width: 768px) {
+  .tbody > tr > th > div {
+    font-size: 12px;
+    height: 38px;
+  }
+  .tbody > tr > .th-chkbox {
+    width: 39px;
+  }
+  .tbody > tr > .td-chkbox > div {
+    height: 37px;
+  }
+  .tbody > tr > .td-select > div {
+    font-size: 12px;
+    height: 37px;
+  }
+  .tbody > tr > td > .div-chkbox {
+    float: left;
+    border-top: 0;
+    border-bottom: 1px solid #bfbfbf;
+    padding-left: 9px;
+    padding-top: 9px;
+    padding-right: 9px;
+    padding-bottom: 9px;
+    width: 36px;
+    height: 36px;
+  }
+  .tbody > tr > td > .div-chkbox-right-border {
+    height: 36px
+  }
+  .tbody > tr > td > .div-normal {
+    padding: 9px;
+    font-size: 12px;
+  }
+}

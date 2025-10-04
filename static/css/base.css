@@ -1,0 +1,117 @@
+#divBody {
+    font-family: "Open Sans";
+    margin: 0;
+    padding: 18px;
+    background-color: #f0f0f0;
+    color: #000000;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+
+
+body {
+    font-family: "Open Sans";
+    margin: 0px;
+    padding: 0px;
+    background-color: #f0f0f0;
+}
+button, a, input::file-selector-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: initial;
+    text-decoration: none;
+}
+button:hover, a:hover, input::file-selector-button:hover {
+    outline: none !important;
+    box-shadow: none;
+}
+button:focus, a:focus, input::file-selector-button:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+input, textarea, select {
+    outline: none !important;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    padding-right: 12px;
+    font-size: 20px;
+}
+input:hover, textarea:hover {
+    outline: none !important;
+    box-shadow: none;
+    border: 1px solid #800000;
+}
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #000000;
+}
+input:focus + label, textarea:focus + label {
+    color: red;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
+.div-clear {
+    clear: both;
+    width: 100%;
+}
+.div-space-18 {
+    height: 18px;
+    width: 100%;
+    clear: both;
+}
+
+
+
+.div-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    input, textarea, select {
+        font-size: 12px;
+    }
+    .div-header {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+@media (min-width: 992px) {
+    #divBody {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+@media (min-width: 1200px) {
+    #divBody {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}

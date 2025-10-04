@@ -1,0 +1,95 @@
+#divMain {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 0px;
+}
+#divMain > div {
+    width: 100%;
+    background-color: #f7f7f7;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+}
+
+
+
+#divMainHeader {
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    padding: 9px;
+}
+#divMainHeader > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: #7f0000;
+}
+
+
+
+#divMainBody {
+    padding: 18px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+#divMainBody > form > .row > label {
+    height: 18px;
+    width: 170px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 12px;
+}
+#divMainBody > form > .row {
+    padding-top: 0px;
+    padding-bottom: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+#divMainBody > form > .row > div {
+    margin: 0px;
+    padding: 0px;
+}
+#divMainBody > form > .row > div > input {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    #divMain {
+        min-width: 450px;
+    }
+    #divMainContent {
+        width: 70%;
+    }
+    #divMainBody > form > .row > .col-md-8 {
+        min-width: 240px;
+        width: calc(100% - 170px)
+    }
+}
+
+
+
+#divMainFooter {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+}
+#message {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: #7f0000;
+}
+
+
+
+#btnCancel {
+    margin-right: 16px;
+}

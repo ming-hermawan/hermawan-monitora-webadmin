@@ -1,0 +1,353 @@
+#divContent {
+  margin: 0;
+  padding-top: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 36px;
+  height: 100%;
+}
+#divList {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 100%;
+}
+#divInput {
+  display: none;
+  position: absolute;
+  padding: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 100%;
+  overflow: auto;
+  background-color: #f0f0f0;
+}
+
+
+
+@media (min-width: 768px) {
+  #divList {
+    padding-left: 0;
+    padding-right: 18px;
+  }
+  #divInput {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 18px;
+    padding-right: 0;
+  }
+  #divImgCloseInput {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  #divList {
+    padding-left: 0;
+    padding-right: 27px;
+  }
+  #divInput {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 27px;
+    padding-right: 0;
+  }
+  #divImgCloseInput {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  #divList {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 36px;
+  }
+  #divInput {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 36px;
+    padding-right: 0;
+  }
+  #divImgCloseInput {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  #divList {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 45px;
+  }
+  #divInput {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 45px;
+    padding-right: 0;
+    height: 100%;
+  }
+  #divImgCloseInput {
+    display: none;
+  }
+}
+
+
+#divControl {
+    padding-left: 0;
+    padding-right: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+#btnDelRow {
+    margin-left: 16px;
+}
+
+
+#divPageButtons {
+  height: 46px;
+  width: 100%;
+}
+#divPageButtons > table {
+  width: 100%;
+}
+#divPageButtons > table > tbody > tr > td > div {
+  height: 100%;
+}
+#divPageButtons > table > tbody > tr > td:nth-child(1),
+#divPageButtons > table > tbody > tr > td:nth-child(2),
+#divPageButtons > table > tbody > tr > td:nth-child(4),
+#divPageButtons > table > tbody > tr > td:nth-child(5) {
+  width: 46px;
+}
+#divPageButtons > table > tbody > tr > td:nth-child(1) > div,
+#divPageButtons > table > tbody > tr > td:nth-child(2) > div,
+#divPageButtons > table > tbody > tr > td:nth-child(4) > div,
+#divPageButtons > table > tbody > tr > td:nth-child(5) > div {
+  padding: 1px;
+}
+#divPageButtons > table > tbody > tr > td:nth-child(3) {
+  width: calc(100% - 184px);
+}
+#divPageButtons > table > tbody > tr > td:nth-child(3) > div {
+  width: 100%;
+}
+#divPageButtons > table > tbody > tr > td:nth-child(3) > div > div {
+  margin: auto;
+  width: fit-content;
+}
+#divPageButtons > table > tbody > tr > td:nth-child(3) > div > div > p {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+
+#frmInp label {
+    min-width: 125px;
+}
+#frmInp .h-inp-chkbox {
+    min-width: 125px;
+}
+#frmInp .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+#frmInp .col-sm-12 > input, #frmInp .col-sm-12 > select {
+    width: 100%;
+}
+.form-check-inp {
+  outline: none;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  height: 32px;
+}
+
+#divInputMessage {
+  font-size: 20px;
+  color: #ff0000;
+  height: 30px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  #frmInp label, #frmInp .h-inp-chkbox {
+      font-size: 12px;
+  }
+  #frmInp input[type="checkbox"] {
+      margin-top: 10px;
+  }
+  #divInputBtn {
+    position: relative;
+    margin-left: calc(100% - 176px);
+    height: 34px;
+    width: 176px;
+  }
+  #divInputMessage {
+    margin-left: 0px;
+    margin-top: -26px;
+    margin-bottom: 8px;
+    position: absolute;
+    height: 18px;
+    font-size: 12px;
+  }
+  #divInputBtn > button {
+    float: left;
+  }
+  #divControl > button:hover {
+      background: #800000;
+  }
+  #divTbl {
+    height: calc(100% - 182px);
+    overflow: auto;
+  }
+  #divPageButtons {
+    height: 34px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(3) > div > div > p {
+    font-size: 12px;
+  }
+
+
+  #divPageButtons {
+    height: 34px;
+  }
+  #divPageButtons > table {
+    width: 100%;
+  }
+  #divPageButtons > table > tbody > tr > td > div {
+    height: 100%;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(1) {
+    width: 34px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(1) > div {
+    padding: 1px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(2) {
+    width: 34px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(2) > div {
+    padding: 1px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(3) {
+    width: calc(100% - 144px);
+    text-align: center;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(4) {
+    width: 34px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(4) > div {
+    padding: 1px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(5) {
+    width: 34px;
+  }
+  #divPageButtons > table > tbody > tr > td:nth-child(5) > div {
+    padding: 1px;
+  }
+  #divPageButtons > table > tbody > tr > td > div > button {
+    padding: 3px;
+  }
+
+}
+
+
+
+
+
+
+#btnCancel {
+  margin-right: 16px;
+}
+
+
+
+/* The container */
+.chkbox-tbl {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.chkbox-tbl input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.chkbox-tbl .checkmark {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border: 1px solid #bfbfbf;
+}
+.chkbox-tbl .checkmark > img {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+.chkbox-tbl input ~ .checkmark > img {
+  display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.chkbox-tbl:hover input ~ .checkmark {
+  border: 1px solid #800000;
+}
+.chkbox-tbl:hover input:checked ~ .checkmark {
+  border: 1px solid #800000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.chkbox-tbl input:checked ~ .checkmark {
+}
+.chkbox-tbl input:checked ~ .checkmark > img {
+  display: block;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.chkbox-tbl:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.chkbox-tbl input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.chkbox-tbl .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

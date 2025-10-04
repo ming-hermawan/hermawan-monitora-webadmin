@@ -1,0 +1,31 @@
+#tbodyContent > tr:nth-child(even) > td {
+    background-color: #d7d7d7;
+}
+#tbodyContent > tr:nth-child(odd) > td {
+    background-color: #e7e7e7;
+}
+.div-table-content .td-icon {
+    height: 37px;
+    width: 37px;
+}
+.div-table-content .td-icon > div {
+    padding: 3.5px;
+    height: 37px;
+    width: 37px;
+}
+#tbodyContent .td-icon > div > button {
+    background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+    padding: 1px;
+    height: 30px;
+    width: 30px;
+    border-radius: 9px;
+}
+#tbodyContent .th-icon {
+    width: 37px;
+}
+#tbodyContent > tr:nth-child(even) > .td-icon > div > button {
+    border: 1px solid #e7e7e7;
+}
+#tbodyContent > tr:nth-child(odd) > .td-icon > div > button {
+    border: 1px solid #f7f7f7;
+}

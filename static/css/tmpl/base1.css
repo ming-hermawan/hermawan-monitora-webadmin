@@ -1,0 +1,421 @@
+#divBody {
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    height: calc(100% - 79px);
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+}
+#divBackHeader {
+    z-index: 0;
+    margin: 0px;
+    width: 100%;
+    background-color: #3f3f3f;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+#divHeader {
+    position: absolute;
+    height: 39px;
+}
+#imgAvatar0 {
+    height:24px;
+    width:24px;
+    object-fit:cover;
+    border-radius:16px;
+}
+#divFooter{
+    background: #3f3f3f;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding-left: 9px;
+    padding-top: 3px;
+    padding-right: 9px;
+    padding-bottom: 3px;
+    height: 29px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#divAppName {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}
+#div-clock {
+    font-family: Roboto Mono;
+    float: right;
+    height: 21px;
+    color: #ffffff;
+}
+
+
+
+@media (min-width: 768px) {
+    .div-wide-menu-area {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+@media (min-width: 1200px) {
+    .div-wide-menu-area {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+
+
+#divWideMenu {
+    display: none;
+}
+#divOuterLayer1 {
+    display: none;
+    height: calc(100% - 39px);
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 39px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+@media (max-width: 767px) {
+  #divBackHeader {
+      height: 50px;
+  }
+  .div-space-for-header {
+      height: 50px;
+      width: 100%;
+  }
+  #divMenuNarrow2 {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: -500px;
+      margin-left: 0px;
+      padding-bottom: 9px;
+  }
+  #liMainMenu > ul > button > div > img {
+      height: 48px;
+      width: 48px;
+  }
+  #liMainMenu > ul {
+      margin: 0;
+      padding: 0;
+  }
+  #liMainMenu > ul > .div-label {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ffffff;
+      font-weight: bold;
+      width: 100%;
+      border-top: 0;
+      border-bottom: 1px solid #ffffff;
+      border-left: 0;
+      border-right: 0;
+  }
+  #liMainMenu > ul > .div-label > div {
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: calc(100% - 48px);
+      text-align: left;
+  }
+  #liMainMenu > ul > .div-label > div > p {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      text-align: left;
+  }
+  #liMainMenu > ul > .div-label > img {
+      float: left;
+      margin: 0;
+      padding: 0;
+      height: 48px;
+      width: 48px;
+  }
+  #liMainMenu .div-sub-sub-menu {
+      display: none;
+  }
+  #liMainMenu .div-sub-sub-menu ul {
+      padding: 0;
+      margin: 0;
+  }
+  #liMainMenu .div-sub-sub-menu > div {
+      position: relative;
+      height: 18px;
+      width: 18px;
+      border-top: 1px solid #ffffff;
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 1px solid #ffffff;
+      border-top-right-radius: 6px;
+  }
+  #liMainMenu .div-sub-sub-menu > li {
+      position: relative;
+      margin-left: 17px;
+      border-top: 0;
+      border-bottom: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-right: 0;
+      border-bottom-left-radius: 6px;
+  }
+  #liMainMenu .div-sub-sub-menu .div-label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  #liMainMenu .div-sub-sub-menu .div-label > a, #liMainMenu .div-sub-sub-menu .div-label > button {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .superLi {
+    margin-left: 18px;
+  }
+  #buttonMenuBack {
+      display: block;
+      position: absolute;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      border-top: 1px solid #000000;
+      border-left: 1px solid #3f3f3f;
+      border-right: 1px solid #000000;
+      background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+      z-index: 2;
+  }
+  #buttonMenuBack > div {
+      border: 1px solid white;
+      padding: 3px;
+      border-radius: 50%;
+  }
+  .div-label-2 {
+      background-color: #3f3f3f;
+  }
+}
+@media (min-width: 768px) {
+    #divBody {
+        height: calc(100% - 68px);
+    }
+
+
+    #divBackHeader {
+        height: 39px;
+    }
+    .div-space-for-header {
+        height: 39px;
+        width: 100%;
+    }
+    #divMenuNarrow2 {
+        display: none;
+    }
+    #buttonMenuBack {
+        display: none;
+    }
+
+
+
+    #divWideMenu {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .div-sub-menu-area > .div-sub-menu-button {
+        margin-left: 0px;
+    }
+    .div-sub-menu-area > .div-sub-sub-menu {
+        display: none;
+        position: absolute;
+        z-index: 5;
+    }
+    .div-config-sub-menu {
+        width: 150px;
+    }
+    .div-config-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu {
+        margin-left: 149px;
+        width: 120px;
+    }
+    .div-config-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu > .div-sub-menu-button {
+        width: 120px;
+    }
+    .div-config-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu {
+        margin-left: 119px;
+        width: 150px;
+    }
+    .div-config-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu > .div-sub-menu-button > .div-sub-menu-area > .div-sub-sub-menu > .div-sub-menu-button {
+        width: 150px;
+    }
+    .div-sub-menu-area:hover > .div-sub-sub-menu {
+        display: block;
+    }
+    .div-sub-area-level-1 > .div-sub-menu-button > li > .div-label {
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+    }
+    .div-sub-sub-menu > .div-sub-menu-button > li > .div-label {
+        border-right: 1px solid #ffffff;
+    }
+    .div-wide-menu-area {
+        width: calc(100% - 180px);
+        margin: 0;
+        padding: 0;
+        position: fixed;
+    }
+    .div-wide-menu-area .div-main-button {
+        position: absolute;
+        background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+        border-top: 1px solid #000000;
+        border-left: 1px solid #3f3f3f;
+        border-right: 1px solid #000000;
+        height: 39px;
+    }
+    .div-wide-menu-area .div-main-button-hover {
+        position: absolute;
+        background-color: #000000;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        height: 39px;
+        z-index: 4;
+    }
+    .div-wide-menu-area .div-main-button-hover:hover {
+        background-color: #800000;
+    }
+    .div-icon-menu-area > .div-menu-button {
+        padding: 6.5px;
+        width: 39px;
+        margin-left: 0px;
+    }
+    .div-icon-menu-area > .div-menu-button > image {
+        border-radius: 12px;
+        border: 1px solid #000000;
+    }
+    .div-profile-sub-menu {
+        margin-left: 0px;
+        width: 120px;
+    }
+
+    .div-text-menu-area > .div-menu-button {
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        width: 100px;
+        text-align: center;
+    }
+    .div-monitoring-sub-menu {
+        width: 120px;
+    }
+    .div-report-monitoring-port-sub-menu {
+        margin-left: 119px;
+        width: 120px;
+    }
+    .div-sub-menu-button {
+        z-index: 3;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    .div-sub-menu-button > li > .div-label {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 12px;
+        height: 36px;
+    }
+    .div-sub-menu-button > li > .div-label > a, .div-sub-menu-button > li > .div-label > button, .div-sub-menu-button > li > .div-label > div {
+        padding: 9px;
+    }
+    .div-sub-menu-button > li:first-child > .div-label {
+      border-top: 1px solid #ffffff;
+    }
+    .div-sub-menu-button > li:last-child > .div-label {
+      border-bottom: 1px solid #ffffff;
+    }
+    .div-sub-menu-button > li > .div-label:hover {
+        background-color: #800000;
+    }
+    .div-sub-menu-button a, .div-sub-menu-button button {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: #ffffff;
+        font-size: 12px;
+        text-align: left;
+    }
+    .div-hover-menu {
+        display: none;
+        position: absolute;
+    }
+    #divOuterLayer1 > .div-wide-menu-area > .div-main-button {
+        position: absolute;
+    }
+    #divOuterLayer1 > .div-wide-menu-area > .div-hover-menu-area {
+        position: absolute;
+        display: none;
+        margin-top: -39px;
+    }
+    #divOuterLayer1 > .div-wide-menu-area > .div-hover-menu-area >  .div-sub-area-level-1 {
+        margin-top: 38px;
+    }
+
+
+
+    .div-profile-menu-area {
+        margin-left: 0px;
+    }
+    .div-config-menu-area {
+        margin-left: 39px;
+    }
+    .div-monitoring-menu-area-1 {
+        margin-left: 139px;
+    }
+    .div-monitoring-menu-area-2 {
+        margin-left: 39px;
+    }
+
+    .div-report-menu-area-1 {
+        margin-left: 239px;
+    }
+    .div-report-menu-area-2 {
+        margin-left: 139px;
+    }
+    .div-report-menu-area-3 {
+        margin-left: 39px;
+    }
+
+    .div-help-menu-area-1 {
+        margin-left: 339px;
+    }
+    .div-help-menu-area-2 {
+        margin-left: 239px;
+    }
+    .div-help-menu-area-3 {
+        margin-left: 139px;
+    }
+    .div-help-menu-area-4 {
+        margin-left: 39px;
+    }
+}
+
+#divMenuNarrow2 .div-label > a {
+    width: 100%;
+}

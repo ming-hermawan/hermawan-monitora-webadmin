@@ -1,0 +1,268 @@
+{{define "head-form-with-tab-pages"}}
+<link rel="stylesheet" href="/static/css/tmpl/filter/standard.css">
+<link rel="stylesheet" href="/static/css/tmpl/base/chkbox.css">
+<link rel="stylesheet" href="/static/css/admin/users-management/user-group.css">
+<script src="/static/js/tmpl/filter/standard.js"></script>
+<script src="/static/js/admin/usermanagement/usergroup.js"></script>
+{{end}}
+{{define "body-form-inp-button"}}
+<button data-page="divPageMenus" class="btn">Menus</button>
+{{end}}
+{{define "body-form-inp-page-main"}}
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="usergroup">User-Group Name</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="text"
+                 id="usergroup"
+                 class="h-inp h-inp-text"
+                 pattern="[A-Za-z0-9\x2D]*"
+                 title="Allowed characters are alphabetic, digit, or hyphen(-)"
+          />
+        </div>
+    </div>
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="sortnumber">Sort Number</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="number"
+                 id="sortnumber"
+                 class="h-inp h-inp-number"
+          />
+        </div>
+    </div>
+{{end}}
+{{define "body-form-inp-page"}}
+<div id="divPageMenus" class="div-page">
+  <li>
+      <ul>
+        <div>
+            <label class="h-inp-chkbox" for="menu-A">Admin
+              <input type="checkbox"
+                     id="menu-A"
+                     data-menu=""
+                     class="h-inp h-inp-checkbox menu-A"
+                     value="0"
+              />
+              <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+            </label>
+            <li>
+                <ul>
+                  <div>
+                      <label class="h-inp-chkbox" for="menu-A-UM">Users Management
+                        <input type="checkbox"
+                               id="menu-A-UM"
+                               data-menu=""
+                               class="h-inp h-inp-checkbox menu-A menu-A-UM"
+                               value="0"
+                        />
+                        <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                      </label>
+                      <li>
+                          <ul>
+                            <div>
+                                <label class="h-inp-chkbox" for="menu-A-UM-usergroup">User-Groups
+                                  <input type="checkbox"
+                                         id="menu-A-UM-usergroup"
+                                         data-menu="A-UM-usergroup"
+                                         class="h-inp h-inp-checkbox menu-A menu-A-UM menu-A-UM-usergroup"
+                                         value="0"
+                                  />
+                                  <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                </label>
+                            </div>
+                          </ul>
+                          <ul>
+                            <div>
+                                <label class="h-inp-chkbox" for="menu-A-UM-user">Users
+                                  <input type="checkbox"
+                                         id="menu-A-UM-user"
+                                         data-menu="A-UM-user"
+                                         class="h-inp h-inp-checkbox menu-A menu-A-UM menu-A-UM-user"
+                                         value="0"
+                                  />
+                                  <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                </label>
+                            </div>
+                          </ul>
+                      </li>
+                  </div>
+                </ul>
+                <ul>
+                  <div>
+                      <label class="h-inp-chkbox" for="menu-A-M">Monitoring
+                        <input type="checkbox"
+                               id="menu-A-M"
+                               data-menu=""
+                               class="h-inp h-inp-checkbox menu-A menu-A-M"
+                               value="0"/>
+                        <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                      </label>
+                      <li>
+                          <ul>
+                            <div>
+                                <label class="h-inp-chkbox" for="menu-A-M-ports">Ports
+                                  <input type="checkbox"
+                                         id="menu-A-M-ports"
+                                         data-menu=""
+                                         class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports"
+                                         value="0"/>
+                                  <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                </label>
+                                <li>
+                                    <ul>
+                                      <div>
+                                          <label class="h-inp-chkbox" for="menu-A-M-ports-settings">Settings
+                                            <input type="checkbox"
+                                                   id="menu-A-M-ports-settings"
+                                                   data-menu="A-M-ports-settings"
+                                                   class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports menu-A-M-ports-settings"
+                                                   value="0"/>
+                                            <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                          </label>
+                                      </div>
+                                    </ul>
+                                    <ul>
+                                      <div>
+                                          <label class="h-inp-chkbox" for="menu-A-M-ports-servergroup">Server Groups
+                                            <input type="checkbox"
+                                                   id="menu-A-M-ports-servergroup"
+                                                   data-menu="A-M-ports-servergroup"
+                                                   class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports menu-A-M-ports-servergroup"
+                                                   value="0"/>
+                                            <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                          </label>
+                                      </div>
+                                    </ul>
+                                    <ul>
+                                      <div>
+                                          <label class="h-inp-chkbox" for="menu-A-M-ports-serversNports">Servers & Ports
+                                            <input type="checkbox"
+                                                   id="menu-A-M-ports-serversNports"
+                                                   data-menu="A-M-ports-serversNports"
+                                                   class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports menu-A-M-ports-serversNports"
+                                                   value="0"/>
+                                            <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                          </label>
+                                      </div>
+                                    </ul>
+                                    <ul>
+                                      <div>
+                                          <label class="h-inp-chkbox" for="menu-A-M-P-email">Alert Email
+                                            <input type="checkbox"
+                                                   id="menu-A-M-P-email"
+                                                   data-menu="A-M-P-email"
+                                                   class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports A-M-P-email"
+                                                   value="0"/>
+                                            <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                          </label>
+                                      </div>
+                                    </ul>
+                                    <ul>
+                                      <div>
+                                          <label class="h-inp-chkbox" for="menu-A-M-P-csv">Update from CSV File
+                                            <input type="checkbox"
+                                                   id="menu-A-M-P-csv"
+                                                   data-menu="A-M-P-csv"
+                                                   class="h-inp h-inp-checkbox menu-A menu-A-M menu-A-M-ports menu-A-M-P-csv"
+                                                   value="0"/>
+                                            <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                          </label>
+                                      </div>
+                                    </ul>
+                                </li>
+                            </div>
+                          </ul>
+                      </li>
+                  </div>
+                </ul>
+            </li>
+        </div>
+      </ul>
+      <ul>
+        <div>
+            <label class="h-inp-chkbox" for="menu-M">Monitoring
+              <input type="checkbox"
+                     id="menu-M"
+                     data-menu=""
+                     class="h-inp h-inp-checkbox menu-M"
+                     value="0"/>
+              <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+            </label>
+            <li>
+                <ul>
+                  <div>
+                      <label class="h-inp-chkbox" for="menu-M-ports">Ports
+                        <input type="checkbox"
+                               id="menu-M-ports"
+                               data-menu="M-ports"
+                               class="h-inp h-inp-checkbox menu-M  menu-M-P"
+                               value="0"/>
+                        <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                      </label>
+                  </div>
+                </ul>
+            </li>
+        </div>
+      </ul>
+      <ul>
+        <div>
+            <label class="h-inp-chkbox" for="menu-R">Report
+              <input type="checkbox"
+                     id="menu-R"
+                     data-menu=""
+                     class="h-inp h-inp-checkbox menu-R"
+                     value="0"/>
+              <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+            </label>
+            <li>
+                  <ul>
+                      <div>
+                          <label class="h-inp-chkbox" for="menu-R-M">Monitoring
+                                  <input type="checkbox"
+                                         id="menu-R-M"
+                                         data-menu=""
+                                         class="h-inp h-inp-checkbox menu-R menu-R-M"
+                                         value="0"/>
+                                  <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                          </label>
+                          <li>
+                              <ul>
+                                  <div>
+                                      <label class="h-inp-chkbox" for="menu-R-M-ports">Ports
+                                          <input type="checkbox"
+                                                 id="menu-R-M-ports"
+                                                 data-menu="R-M-ports"
+                                                 class="h-inp h-inp-checkbox menu-R menu-R-M menu-R-M-ports"
+                                                 value="0"/>
+                                          <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+                                      </label>
+                                  </div>
+                              </ul>
+                          </li>
+                      </div>
+                  </ul>
+              </li>
+          </div>
+      </ul>
+  </li>
+</div>
+{{end}}
+{{define "input-form-2col-base-hidden"}}
+<input id="usergroup0"/>
+<input id="sortnumber0"/>
+<input id="menu0-A" class="menu0"/>
+<input id="menu0-A-UM" class="menu0"/>
+<input id="menu0-A-UM-usergroup" class="menu0"/>
+<input id="menu0-A-UM-user" class="menu0"/>
+<input id="menu0-A-M" class="menu0"/>
+<input id="menu0-A-M-ports" class="menu0"/>
+<input id="menu0-A-M-ports-settings" class="menu0"/>
+<input id="menu0-A-M-ports-servergroup" class="menu0"/>
+<input id="menu0-A-M-ports-serversNports" class="menu0"/>
+<input id="menu0-A-M-P-email" class="menu0"/>
+<input id="menu0-A-M-P-csv" class="menu0"/>
+<input id="menu0-M" class="menu0"/>
+<input id="menu0-M-ports" class="menu0"/>
+<input id="menu0-R" class="menu0"/>
+<input id="menu0-R-M" class="menu0"/>
+<input id="menu0-R-M-ports" class="menu0"/>
+{{end}}

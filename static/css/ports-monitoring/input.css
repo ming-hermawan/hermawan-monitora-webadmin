@@ -1,0 +1,93 @@
+.div-inp {
+    background-color: #f0f0f0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 0px;
+}
+.div-inp > div {
+    padding: 9px;
+    border: 1px solid #bfbfbf;
+    border-radius:6px;
+    height: 100%;
+    width: 100%;
+}
+.div-inp-label {
+    float: left;
+    font-size: 12px;
+    width: 100px;
+    height: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.div-inp-inp {
+    float: left;
+    font-size: 12px;
+    min-width: 120px;
+    width: calc(100% - 100px);
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+.div-inp-inp > select {
+    font-size: 12px;
+    width: 100%;
+}
+.div-inp-inp > input {
+    font-size: 12px;
+    width: 100%;
+}
+.div-button {
+    width: 100%;
+    text-align: right;
+}
+.div-button > button {
+  background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 80px;
+}
+.div-button > button:disabled {
+  background-image: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 50%, #e0e0e0 100%);
+  color: black;
+}
+
+
+
+.div-table-ports {
+    border: 1px solid #ffffff;
+    background-color: #e7e7e7;
+}
+.div-table-ports > table {
+    width: 100%;
+}
+.div-table-ports > table > tbody > tr > th > div {
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #ffffff;
+    height: 38px;
+    width: 100%;
+    padding: 9px;
+    font-size: 12px;
+    background-image: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 50%, #e0e0e0 100%);
+    color: #000000;
+    text-align: center;
+}
+.div-table-ports > table > tbody > tr > th:nth-child(1) > div {
+    border-left: 0;
+    border-right: 1px solid #ffffff;
+}
+.div-table-ports > table > tbody > tr > th:nth-last-child(1) > div {
+    border-left: 1px solid #bfbfbf;
+    border-right: 0;
+}
+
+#divPortsButtonControl {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+#idButtonDelPorts {
+    margin-right: 18px;
+}

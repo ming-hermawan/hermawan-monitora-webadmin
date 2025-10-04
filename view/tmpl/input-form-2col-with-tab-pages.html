@@ -1,0 +1,38 @@
+{{define "head-form-base"}}
+    <link rel="stylesheet" href="/static/css/tmpl/input-form-2col-with-tab-pages.css">
+    <script src="/static/js/tmpl/input-form-2col-with-tab-pages.js"></script>
+    {{ template "head-form-with-tab-pages" . }}
+{{end}}
+{{define "body-inp"}}
+    <div id="divInputBox" class="div-box-tab-pages-out">
+    <div class="div-box-tab-pages-in">
+        <div id="divInputButton">
+            <button data-page="divPageMain" class="btn">Main</button>
+            {{ template "body-form-inp-button" . }}
+        </div>
+        <div id="divImgCloseInput">
+            <button id="buttonImgCloseInput" class="btn-close-box">
+              <img src="/static/img/icon/icons8-close-24-white.png"/>
+            </button>
+        </div>
+        <div id="divInputPage">
+          <form id="frmInp" class="form-inp">
+              <div class="div-space-9"></div>
+              <div id="divInputPageBody">
+                  <div id="divPageMain">
+                      {{ template "body-form-inp-page-main" . }}
+                  </div>
+                  {{ template "body-form-inp-page" . }}
+              </div>
+              <div class="col-12">
+                  <div id="divInputBtn">
+                      <button id="btnCancel" type="button" class="btn btn-primary">Cancel</button>
+                      <button id="btnSave" type="submit" class="btn btn-primary">Save</button>
+                  </div>
+                  <div id="divInputMessage"></div>
+              </div>
+          </form>
+        </div>
+    </div>
+    </div>
+{{end}}

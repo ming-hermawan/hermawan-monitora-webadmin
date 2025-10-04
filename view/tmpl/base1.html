@@ -1,0 +1,358 @@
+{{define "head0"}}
+    <link rel="stylesheet" href="/static/css/tmpl/base1.css">
+    <script src="/static/js/tmpl/base1.js"></script>
+    {{ template "head" . }}
+{{end}}
+{{define "body0"}}
+    <div id="divHeader">
+        <div id="divWideMenu">
+            <div class="div-wide-menu-area">
+                <div class="div-icon-menu-area div-profile-menu-area">
+                  <button id="wideMenuProfile" class="div-menu-button div-main-button">
+                    <img id="imgAvatar0" src="/profile/avatar"/>
+                  </button>
+                </div>
+                {{if or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv}}
+                <div class="div-text-menu-area div-config-menu-area">
+                  <button id="wideMenuConfig" class="div-menu-button div-main-button">Admin</button>
+                </div>
+                {{end}}
+                {{if .MonPort}}
+                <div class="div-text-menu-area {{if or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv}}div-monitoring-menu-area-1{{else}}div-monitoring-menu-area-2{{end}}">
+                  <button id="wideMenuMonitoring" class="div-menu-button div-main-button">Monitoring</button>
+                </div>
+                {{end}}
+                {{if .ReportMonPort}}
+                <div class="div-text-menu-area {{if and .MonPort (or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv)}}div-report-menu-area-1{{else if .MonPort}}div-report-menu-area-2{{else}}div-report-menu-area-3{{end}}">
+                  <button id="wideMenuReport" class="div-menu-button div-main-button">Report</button>
+                </div>
+                {{end}}
+                <div class="div-icon-menu-area {{if and .MonPort (or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv)}}div-help-menu-area-1{{else if and .MonPort .ReportMonPort}}div-help-menu-area-2{{else if or .MonPort .ReportMonPort}}div-help-menu-area-3{{else}}div-help-menu-area-4{{end}}">
+                  <button id="wideMenuHelp" class="div-menu-button div-main-button">
+                    <img src="/static/img/icon/icons8-help-24.png"/>
+                  </button>
+                </div>
+            </div>
+        </div>
+        <div class="div-clear"></div>
+    </div>
+      <div id="divOuterLayer1">
+          <div class="div-wide-menu-area">
+              <div class="div-hover-menu-area div-icon-menu-area div-profile-menu-area" id="divHoverProfileMenu" onmouseleave="hide_menu()">
+                  <button class="div-menu-button div-main-button-hover">
+                      <img src="/profile/avatar" style="height:24px;width:24px;object-fit:cover;border-radius:16px;"/>
+                  </button>
+                  <div class="div-sub-area-level-1 div-profile-sub-menu">
+                      <ul class="div-sub-menu-button">
+                          <li>
+                              <div class="div-label">
+                                  <a href="/profile">Profile</a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="div-label">
+                                  <a href="/change-password">Change Password</a>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="div-label">
+                                  <a href="/logout">Logout</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              {{if or .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortSettings .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortAlertEmail .AdmMonPortUploadCsv}}
+              <div class="div-hover-menu-area div-text-menu-area div-config-menu-area" id="divHoverMenuConfig" onmouseleave="hide_menu()">
+                  <button class="div-menu-button div-main-button-hover">Admin</button>
+                  <div class="div-sub-area-level-1 div-config-sub-menu">
+                      <ul class="div-sub-menu-button">
+                          {{if .AdmMonPortSettings}}
+                          <li class="div-sub-menu-area">
+                              <div class="div-label">
+                                  <a href="/admin/setting">Settings</a>
+                              </div>
+                          </li>
+                          {{end}}
+                          {{if or .AdmUsrMgtUsrGrp .AdmUsrMgtUsr}}
+                          <li class="div-sub-menu-area">
+                              <div class="div-sub-sub-menu">
+                                  <ul class="div-sub-menu-button">
+                                      {{if .AdmUsrMgtUsrGrp}}
+                                      <li class="div-sub-menu-area">
+                                          <div class="div-label">
+                                              <a href="/admin/user-management/user-group">User Groups</a>
+                                          </div>
+                                      </li>
+                                      {{end}}
+                                      {{if .AdmUsrMgtUsr}}
+                                      <li class="div-sub-menu-area">
+                                          <div class="div-label">
+                                              <a href="/admin/user-management/user">Users</a>
+                                          </div>
+                                      </li>
+                                      {{end}}
+                                  </ul>
+                              </div>
+                              <div class="div-label">
+                                  <a href="/admin/users">Users Management</a>
+                              </div>
+                          </li>
+                          {{end}}
+                          {{if or .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortAlertEmail .AdmMonPortUploadCsv}}
+                          <li class="div-sub-menu-area">
+                              <div class="div-sub-sub-menu">
+                                  <ul class="div-sub-menu-button">
+                                      <li class="div-sub-menu-area">
+                                          <div class="div-sub-sub-menu">
+                                              <ul class="div-sub-menu-button">
+                                                  {{if .AdmMonPortServerGrp}}
+                                                  <li>
+                                                      <div class="div-label">
+                                                          <a href="/admin/monitoring/port/server-group">Server Groups</a>
+                                                      </div>
+                                                  </li>
+                                                  {{end}}
+                                                  {{if .AdmMonPortServerNPorts}}
+                                                  <li>
+                                                      <div class="div-label">
+                                                          <a href="/admin/monitoring/port/server-n-ports">Servers &amp; Ports</a>
+                                                      </div>
+                                                  </li>
+                                                  {{end}}
+                                                  {{if .AdmMonPortAlertEmail}}
+                                                  <li>
+                                                      <div class="div-label">
+                                                          <a href="/admin/monitoring/port/alertemail">Alert Emails</a>
+                                                      </div>
+                                                  </li>
+                                                  {{end}}
+                                                  {{if .AdmMonPortUploadCsv}}
+                                                  <li>
+                                                      <div class="div-label">
+                                                          <a href="/admin/monitoring/port/upload-csv">Update from CSV File</a>
+                                                      </div>
+                                                  </li>
+                                                  {{end}}
+                                              </ul>
+                                          </div>
+                                          <div class="div-label"><div>Ports</div></div>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="div-label"><div>Monitoring</div></div>
+                          </li>
+                          {{end}}
+                      </ul>
+                  </div>
+              </div>
+              {{end}}
+              {{if .MonPort}}
+              <div class="div-hover-menu-area div-text-menu-area {{if or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv}}div-monitoring-menu-area-1{{else}}div-monitoring-menu-area-2{{end}}" id="divHoverMenuMonitoring" onmouseleave="hide_menu()">
+                <button class="div-menu-button div-main-button-hover">Monitoring</button>
+                <div class="div-sub-area-level-1 div-monitoring-sub-menu">
+                    <ul class="div-sub-menu-button">
+                      <li>
+                        <div class="div-label"><a href="/monitoring/port">Ports</a></div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+              {{end}}
+              {{if .ReportMonPort}}
+              <div class="div-hover-menu-area div-text-menu-area  {{if and .MonPort (or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv)}}div-report-menu-area-1{{else if .MonPort}}div-report-menu-area-2{{else}}div-report-menu-area-3{{end}}" id="divHoverReportMenu" onmouseleave="hide_menu()">
+                <button class="div-menu-button div-main-button-hover">Report</button>
+                <div class="div-sub-area-level-1 div-monitoring-sub-menu">
+                    <ul class="div-sub-menu-button">
+
+                          <li class="div-sub-menu-area">
+                              <div class="div-sub-sub-menu div-report-monitoring-port-sub-menu">
+                                  <ul class="div-sub-menu-button">
+                                      <li class="div-sub-menu-area">
+                                          <div class="div-label">
+                                              <a href="/report/monitoring/port">Port</a>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="div-label"><div>Monitoring</div></div>
+                          </li>
+
+                    </ul>
+                </div>
+              </div>
+              {{end}}
+              <div class="div-hover-menu-area div-icon-menu-area {{if and .MonPort (or .AdmMonPortSettings .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortUploadCsv)}}div-help-menu-area-1{{else if and .MonPort .ReportMonPort}}div-help-menu-area-2{{else if or .MonPort .ReportMonPort}}div-help-menu-area-3{{else}}div-help-menu-area-4{{end}}" id="divHoverHelpMenu" onmouseleave="hide_menu()">
+                  <button class="div-menu-button div-main-button-hover">
+                      <img src="/static/img/icon/icons8-help-24.png"/>
+                  </button>
+                  <div class="div-sub-area-level-1 div-monitoring-sub-menu">
+                    <ul class="div-sub-menu-button">
+                      <li>
+                        <div class="div-label"><button onclick="OpenAboutModal()">About</button></div>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <button id="buttonMenuBack" class="button-menu">
+          <img id="imgMenuBack" src="/static/img/icon/icons8-menu-48.png"/>
+      </button>
+      <div id="divMenuNarrow2">
+          <div style="height:50px;width:100%;"></div>
+          <li id="liMainMenu">
+              <ul>
+                  <button id="narrowMenuProfile" class="div-label">
+                      <div><img src="/profile/avatar" style="height:48px;width:48px;object-fit:cover;border-radius:24px;"/></div><img src="/static/img/icon/icons8-sort-right-48.png"/>
+                  </button>
+                  <div id="narrowMenuAreaProfile" class="div-sub-sub-menu">
+                      <div></div>
+                      <li>
+                          <ul><div class="div-label"><a href="/profile">Profile</a></div></ul>
+                          <ul><div class="div-label"><a href="/change-password">Change Password</a></div></ul>
+                          <ul><div class="div-label"><a href="/logout">Logout</a></div></ul>
+                      </li>
+                  </div>
+              </ul>
+              {{if or .AdmUsrMgtUsrGrp .AdmUsrMgtUsr .AdmMonPortSettings .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortAlertEmail .AdmMonPortUploadCsv}}
+              <ul>
+                  <button id="narrowMenuAdmin" class="div-label">
+                      <div><p>Admin</p></div><img src="/static/img/icon/icons8-sort-right-48.png"/>
+                  </button>
+                  <div id="narrowMenuAreaAdmin" class="div-sub-sub-menu">
+                      <div></div>
+                      <li>
+                        {{if .AdmMonPortSettings}}
+                        <ul><div class="div-label"><a href="/admin/setting">Settings</a></div></ul>
+                        {{end}}
+                        {{if or .AdmUsrMgtUsrGrp .AdmUsrMgtUsr}}
+                        <ul>
+                            <div class="div-label div-label-2">Users Management</div>
+                            <li class="superLi">
+                                {{if .AdmUsrMgtUsrGrp}}
+                                <ul>
+                                  <div class="div-label">
+                                    <a href="/admin/user-management/user-group">User Groups</a>
+                                  </div>
+                                </ul>
+                                {{end}}
+                                {{if .AdmUsrMgtUsr}}
+                                <ul>
+                                  <div class="div-label">
+                                    <a href="/admin/user-management/user">Users</a>
+                                  </div>
+                                </ul>
+                                {{end}}
+                            </li>
+                        </ul>
+                        {{end}}
+                        {{if or .AdmMonPortServerGrp .AdmMonPortServerNPorts .AdmMonPortAlertEmail .AdmMonPortUploadCsv}}
+                        <ul>
+                            <div class="div-label div-label-2">Monitoring</div>
+                            <li class="superLi">
+                                <ul>
+                                    <div class="div-label">Ports</div>
+                                    <li class="superLi">
+                                        {{if .AdmMonPortServerGrp}}
+                                        <ul>
+                                          <div class="div-label">
+                                            <a href="/admin/monitoring/port/server-group">Server Groups</a>
+                                          </div>
+                                        </ul>
+                                        {{end}}
+                                        {{if .AdmMonPortServerNPorts}}
+                                        <ul>
+                                          <div class="div-label">
+                                            <a href="/admin/monitoring/port/server-n-ports">Servers &amp; Ports</a>
+                                          </div>
+                                        </ul>
+                                        {{end}}
+                                        {{if .AdmMonPortAlertEmail}}
+                                        <ul>
+                                          <div class="div-label">
+                                            <a href="/admin/monitoring/port/alertemail">Alert Emails</a>
+                                          </div>
+                                        </ul>
+                                        {{end}}
+                                        {{if .AdmMonPortUploadCsv}}
+                                        <ul>
+                                          <div class="div-label">
+                                            <a href="/admin/monitoring/port/upload-csv">Update from CSV File</a>
+                                          </div>
+                                        </ul>
+                                        {{end}}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        {{end}}
+                      </li>
+                  </div>
+              </ul>
+              {{end}}
+              {{if .MonPort}}
+              <ul>
+                <button id="narrowMenuMonitoring" class="div-label">
+                    <div><p>Monitoring</p></div><img src="/static/img/icon/icons8-sort-right-48.png"/>
+                </button>
+                <div id="narrowMenuAreaMonitoring" class="div-sub-sub-menu">
+                      <div></div>
+                      <li>
+                          <ul>
+                            <div class="div-label">
+                              <a href="/monitoring/port">Ports</a>
+                            </div>
+                          </ul>
+                      </li>
+                </div>
+              </ul>
+              {{end}}
+              {{if .ReportMonPort}}
+              <ul>
+                <button id="narrowMenuReport" class="div-label">
+                    <div><p>Report</p></div><img src="/static/img/icon/icons8-sort-right-48.png"/>
+                </button>
+                <div id="narrowMenuAreaReport" class="div-sub-sub-menu">
+                      <div></div>
+                      <li>
+                        <ul>
+                            <div class="div-label div-label-2">Monitoring</div>
+                            <li class="superLi">
+                              <ul>
+                                  <div class="div-label">
+                                    <a href="/report/monitoring/port">Ports</a>
+                                  </div>
+                              </ul>
+                            </li>
+                        </ul>
+                      </li>
+                </div>
+              </ul>
+              {{end}}
+              <ul>
+                  <button id="narrowMenuAbout" class="div-label">
+                      <div><img src="/static/img/icon/icons8-help-48.png"/></div><img src="/static/img/icon/icons8-sort-right-48.png"/>
+                  </button>
+                  <div id="narrowMenuAreaAbout" class="div-sub-sub-menu">
+                      <div></div>
+                      <li>
+                          <ul><div class="div-label"><button onclick="OpenAboutModal()">About</button></div></ul>
+                      </li>
+                  </div>
+              </ul>
+
+
+
+          </li>
+      </div>
+      <div id="divBackHeader"></div>
+      <div id="divBody">
+          {{ template "body" . }}
+      </div>
+      <div id="divFooter">
+          <div id="divAppName">HERMAWAN-MONITORA</div>
+          <div id="div-clock"></div>
+      </div>
+    </div>
+{{end}}

@@ -1,0 +1,50 @@
+{{define "head0"}}
+  <link rel="stylesheet" href="/static/css/login.css">
+  <script src="/static/js/login.js"></script>
+{{end}}
+{{define "body0"}}
+  <div id="divBody" class="row">
+      <div id="divInnerBody">
+          <div id="divLeftBody">
+            <div id="divLogo">
+                <div id="divImg">
+                  <img id="logo" src="/static/img/logo.svg"/>
+                </div>
+                <div id="divTxt">
+                    <div>HERMAWAN</div>
+                    <div>MONITORA</div>
+                </div>
+            </div>
+          </div>
+          <div id="divRightBody" class="row">
+            <div class="col-md-2 col-sm-12"></div>
+            <div class="div-box-out form-inp col-md-10 col-sm-12">
+              <div class="div-box-in">
+                <form id="loginFrm" method="post">
+                    <div class="row">
+                        <label class="lbl col-md-4 col-sm-4 col-xs-12">Username</label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          <input class="h-inp" id="username" tabindex="1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="lbl col-md-4 col-sm-4 col-xs-12">Password</label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          <input class="h-inp" type="password" id="password" tabindex="1"
+title="Allowed characters are alphabetic, digit, or special characters ~ ` ! @ # $ % ^ &amp; * ( ) _ - + = { [ } ] | \ : ; &quot; ' &lt; , &gt; . ? /"
+pattern="[A-Za-z0-9\x7E\x60\x21\x40\x23\x24\x25\x5E\x26\x2A\x28\x29\x5F\x2D\x2B\x3D\x7B\x5B\x7D\x5D\x7C\x5C\x3A\x3B\x22\x27\x3C\x2C\x3E\x2E\x3F\x2F]*"
+                          />
+                        </div>
+                    </div>
+                    <div class="div-btn">
+                        <input class="btn btn-primary" type="submit" value="LOGIN"/>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+{{end}}
+{{define "hidden"}}
+{{end}}

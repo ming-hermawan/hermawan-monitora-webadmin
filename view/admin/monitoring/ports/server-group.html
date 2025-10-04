@@ -1,0 +1,32 @@
+{{define "head-form-normal"}}
+<link rel="stylesheet" href="/static/css/tmpl/filter/standard.css">
+<link rel="stylesheet" href="/static/css/admin/monitoring/ports/server-group.css">
+<script src="/static/js/tmpl/filter/standard.js"></script>
+<script src="/static/js/admin/monitoring/ports/server-groups.js"></script>
+{{end}}
+{{define "body-form-inp"}}
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="servergroup">Server-Group Name</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input type="text"
+             id="servergroup"
+             class="h-inp h-inp-text"
+             pattern="[A-Za-z0-9\x2D]*"
+             title="Allowed characters are alphabetic, digit, or hyphen(-)"
+      />
+    </div>
+</div>
+<div class="row">
+    <label class="lbl col-lg-4 col-md-5 col-sm-12" for="sortnumber">Sort Number</label>
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <input type="number"
+             id="sortnumber"
+             class="h-inp h-inp-number"
+      />
+    </div>
+</div>
+{{end}}
+{{define "input-form-2col-base-hidden"}}
+<input id="servergroup0"/>
+<input id="sortnumber0"/>
+{{end}}

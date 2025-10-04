@@ -1,0 +1,111 @@
+.div-page-tbl {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 9px;
+}
+
+#btnAddPort {
+    text-align: right;
+}
+@media (min-width: 768px) {
+}
+#divTbPorts {
+    height: calc(100% - 172px);
+}
+#divTblEmails {
+    height: calc(100% - 131px);
+}
+.div-box-tbl {
+    width: 100%;
+    overflow: auto;
+}
+.tbody-in-tab > tr > td > div  {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    font-size: 12px;
+    padding: 9px;
+    margin: 0;
+    height: 37px;
+}
+.tbody-in-tab > tr > td > div > label {
+    padding: 0 !important;
+}
+.tbody-in-tab > tr > td:last-child > div {
+    border-right: 0;
+}
+.tbody-in-tab > tr > .td-chkbox > div {
+    width: 36px;
+}
+.tbody-in-tab > tr > .td-chkbox > div > label {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    font-size: 12px;
+}
+.th-chk-box, .th-chk-box > div, .td-chkbox-in-tab, .td-chkbox-in-tab > div {
+    width: 36px;
+}
+#thPort {
+    width: 50%;
+}
+#thPort > div {
+    width: 100%;
+}
+#thServerName {
+    width: 50%;
+}
+#thServerName > div {
+    width: 100%;
+}
+#thEmail {
+    width: 100%;
+}
+#thEmail > div {
+    width: 100%;
+}
+.div-btn-add {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 9px;
+}
+.div-btn-del {
+    width: 100%;
+    text-align: left;
+    padding-top: 9px;
+}
+#trHeader > th:nth-child(2) {
+    width: 100px;
+}
+#trHeader > th:nth-child(3) {
+    width: calc(100% - 141px);
+}
+.tbody > tr > td:nth-child(3) > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#trHeader > th:nth-child(4) {
+    display: none;
+}
+.tbody > tr > td:nth-child(4) {
+    display: none;
+}
+.tbody > tr > td:nth-child(4) > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (min-width: 1200px) {
+    #trHeader > th:nth-child(3) {
+        width: calc(60% - 141px);
+    }
+    #trHeader > th:nth-child(4) {
+        display: table-cell;
+        width: calc(40% - 141px);
+    }
+    .tbody > tr > td:nth-child(4) {
+        display: table-cell;
+    }
+}

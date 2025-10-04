@@ -1,0 +1,54 @@
+#divFilter > div {
+  border: 1px solid #f7f7f7;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+#divFilter > div > input {
+  float: left;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  border-left: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: none;
+  color: #000000;
+  font-size: 20px;
+  width: calc(100% - 44px);
+}
+#divFilter > div > button {
+  float: left;
+  padding: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 6px;
+}
+#divFilter > div > button > img {
+  padding: 9px;
+}
+#divFilter > div > input:focus {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  #divFilter > div > input {
+    font-size: 12px;
+    width: calc(100% - 32px);
+  }
+  #divFilter > div > button {
+    border: 1px solid #000000;
+  }
+  #divFilter > div > button > img {
+    padding: 3px;
+  }
+}

@@ -1,0 +1,32 @@
+{{define "head"}}
+    <link rel="stylesheet" href="/static/css/tmpl/input-form-1col.css">
+    <script src="/static/js/tmpl/input-base.js"></script>
+    <script src="/static/js/tmpl/input-form-1col.js"></script>
+    {{ template "head-form-base" . }}
+{{end}}
+{{define "body"}}
+<div id="divInnerBody" class="row">
+    <div id="divMainContent" class="div-box-out">
+
+
+
+      <div id="divMainContentHeader" class="div-box-in-top">
+          <div id="divTitle">{{$.Name}}</div>
+          <div id="divSubTitle">
+          {{ template "sub-title" }}
+          </div>
+      </div>
+      <div id="divInput" class="div-box-in-middle">
+          <form id="frmInp" class="form-inp">
+          {{ template "body-inp" }}
+          </form>
+      </div>
+      <div id="divMainContentFooter" class="div-box-in-bottom">
+        <p id="message"></p>
+      </div>
+
+
+
+    </div>
+</div>
+{{end}}

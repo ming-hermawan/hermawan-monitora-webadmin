@@ -1,0 +1,128 @@
+#divFilter {
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+#divFilter .row {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 9px;
+}
+#divFilter .row > .col-md-4 {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 9px;
+}
+#divTbl {
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+
+
+
+
+
+
+.thd-server-left {
+    display: none;
+    width: calc(50% - 90px);
+}
+.thd-port {
+    width: calc(100% - 90px);
+}
+.td-port {
+}
+.td-port > div {
+    padding-left: 9px;
+}
+.td-port {
+    width: calc(100% - 90px);
+}
+.tr-server-top > td > div {
+    background-color: #e0e0e0;
+    padding-left: 9px;
+    font-size: 20px;
+}
+
+
+.thd-port > div {
+    padding: 9px;
+}
+.thd-status {
+    width: 90px;
+}
+.thd-status > div {
+    width: 90px;
+}
+.td-status > div {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 0;
+    text-align: center;
+}
+.td-status > div > svg {
+    position: relative;
+}
+.td-first {
+}
+.td-last {
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.td-server-left > div {
+  font-size: 12px;
+  width: 100%;
+  padding: 9px;
+}
+.td-port > div {
+  font-size: 20px;
+  width: 100%;
+  padding: 9px;
+}
+
+.light-on{
+    filter: drop-shadow(0px 0px 3px #00ff00);
+}
+.light-off{
+    filter: drop-shadow(0px 0px 3px #ff0000);
+}
+
+@media (min-width: 768px) {
+  #divFilter .row {
+    width: calc(100% - 80px);
+    padding-bottom: 0;
+  }
+  #divFilter .row > .col-md-4 {
+    padding-right: 18px;
+  }
+  .thd-server-left {
+    display: table-cell;
+    width: 50%;
+  }
+  .thd-port {
+    width: 50%;
+  }
+  .tr-server-top {
+    display: none;
+  }
+  .td-status > div {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .td-port > div {
+    font-size: 12px;
+    width: 100%;
+    padding: 9px;
+  }
+}

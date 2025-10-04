@@ -1,0 +1,83 @@
+{{define "head"}}
+    <link rel="stylesheet" href="/static/css/tmpl/input-form-2col-base.css">
+    <link rel="stylesheet" href="/static/css/tmpl/base/tbl.css">
+    <script src="/static/js/tmpl/input-base.js"></script>
+    <script src="/static/js/tmpl/input-form-2col-base.js"></script>
+    {{ template "head-form-base" . }}
+{{end}}
+{{define "body"}}
+<div id="divContent" class="row">
+    <div class="col-md-1"></div>
+    <div id="divList" class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+        <div id="divControl">
+            <button id="btnNewRow" class="btn btn-icon"><img src="/static/img/icon/icons8-plus-math-24.png"/></button>
+            <button id="btnDelRow" class="btn btn-icon"><img src="/static/img/icon/icons8-subtract-24.png"/></button>
+        </div>
+        <div class="div-space-18"></div>
+        <div id="divFilter">
+          {{ template "body-filter" }}
+        </div>
+        <div class="div-space-18"></div>
+        <div id="divTbl" class="div-tbl">
+          <table>
+            <tbody id="tbodyRows" class="tbody">
+              <tr id="trHeader">
+                <th class="th-chkbox"><div>&nbsp;</div></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="div-space-18"></div>
+        <div id="divPageButtons">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <div>
+                    <a id="linkPageFirst" class="btn-icon">
+                      <img src="/static/img/icon/icons8-double-left-24.png"/>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <a id="linkPagePrev" class="btn-icon">
+                      <img src="/static/img/icon/icons8-back-24.png"/>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div>
+                      <p>Page&nbsp;</p><p id="labelPage"/><p>/</p><p id="labelPageCount"/><div class="div-clear"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <a id="linkPageNext" class="btn-icon">
+                      <img src="/static/img/icon/icons8-forward-24.png"/>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <a id="linkPageLast" class="btn-icon">
+                      <img src="/static/img/icon/icons8-double-right-24.png"/></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <div id="divInput" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        {{ template "body-inp" . }}
+    </div>
+    <div class="col-md-1"></div>
+</div>
+{{end}}
+{{define "hidden"}}
+    <input id="statDb"/>
+    {{ template "input-form-2col-base-hidden" . }}
+{{end}}

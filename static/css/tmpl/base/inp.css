@@ -1,0 +1,36 @@
+.form-inp .row {
+    margin: 0;
+    padding-bottom: 9px;
+}
+.form-inp .lbl {
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    height: 44px;
+}
+.h-inp {
+  height: 44px;
+  width: 100%;
+}
+.h-inp-textarea {
+  height: 98px;
+}
+
+
+
+@media (min-width: 768px) {
+  .h-inp {
+      font-size: 12px;
+      height: 32px;
+  }
+  .form-inp .lbl {
+      font-size: 12px;
+      height: 32px;
+  }
+}
+
+
+

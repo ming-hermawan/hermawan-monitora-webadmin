@@ -1,0 +1,17 @@
+.div-buttons > div {
+    background-image: linear-gradient(to right, #bfbfbf, #ffffff);
+    float: left;
+    border-radius: 5px;
+    margin-right: 18px;
+    border: 1px solid #ffffff;
+}
+.div-buttons > div > button {
+    background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 120px;
+    padding: 9px;
+}

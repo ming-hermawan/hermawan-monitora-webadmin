@@ -1,0 +1,119 @@
+{{define "head"}}
+<link rel="stylesheet" href="/static/css/user/profile.css">
+<link rel="stylesheet" href="/static/css/user/dark-mode.css">
+<script src="/static/js/tmpl/input-base.js"></script>
+<script src="/static/js/user/profile.js"></script>
+{{end}}
+{{define "body"}}
+<div id="divInnerBody" class="row">
+    <div class="col-md-1 col-sm-12"></div>
+    <div id="divContent" class="col-md-10 col-sm-12">
+        <div id="divTopLeft">
+            <div>
+              <div id="divAvatar">
+                <button id="btnAvatarMenuBtn">
+                  <img id="imgAvatar" src="/static/img/icon/icons8-male-user-96.png"/>
+                  <img id="imgMenu" src="/static/img/icon/icons8-menu-vertical-24.png"/>
+                </button>
+                <div id="divAvatarMenu">
+                  <div id="divAvatarMenuSubMenu">
+                    <li>
+                        <ul><button id="btnAvatarUpd">Change</button></ul>
+                        <ul><button id="btnAvatarDel">Delete</button></ul>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="divTopRight">
+            <div>
+                <div>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4 col-xs-12">Username</div>
+                      <div id="username" class="col-md-8 col-sm-8 col-xs-12"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4 col-xs-12">Name</div>
+                      <div id="name" class="col-md-8 col-sm-8 col-xs-12"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4 col-xs-12">Status</div>
+                      <div id="status" class="col-md-8 col-sm-8 col-xs-12"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4 col-xs-12">Email</div>
+                      <div id="email" class="col-md-8 col-sm-8 col-xs-12"></div>
+                  </div>
+                </div>
+            </div>
+            <div><div></div></div>
+        </div>
+        <div id="divBottom">
+          <div class="form-inp">
+            <form id="frmInp">
+            <div class="row">
+                <label class="lbl col-md-4 col-sm-4 col-xs-12" for="language">Language</label>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+<select id="language" name="language" class="form-select h-inp" value="en">
+<option value="en">English</option>
+</select>
+                </div>
+            </div>
+            <div class="row">
+                <label id="lblDarkMode" class="lbl col-md-4 col-sm-4 col-xs-12" for="darkmode">Dark Mode</label>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+
+  <div id="divDarkMode" class="div-main">
+    <input id="darkmode" name="darkmode" type="checkbox" class="h-inp" value="0"/>
+    <div>
+      <div id="divDarkModeBtn">
+        <div id="divSun"></div>
+        <div id="divMoon"></div>
+      </div>
+      <svg id="divCloud" width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="125" cy="50" r="40" fill="white" />
+<circle cx="75" cy="75" r="40" fill="white" />
+      </svg>
+      <img id="imgStar1" class="img_star" src="/static/img/icons8-star-12.png"/>
+      <img id="imgStar2" class="img_star" src="/static/img/icons8-star-12.png"/>
+      <img id="imgStar3" class="img_star" src="/static/img/icons8-star-12.png"/>
+    </div>
+  </div>
+
+                </div>
+            </div>
+            <div class="div-note">NOTE: Dark-Mode is currently only for demonstration purposes and is still in development.</div>
+            <div class="row">
+                <label id="lblNote" class="lbl col-md-4 col-sm-4 col-xs-12">Note</label>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+<textarea id="note" name="note" rows="5" class="h-inp-textarea" style="width: 100%;" value=""></textarea>
+                </div>
+            </div>
+            <div class="div-btn">
+              <button id="btnCancel" type="button" class="btn btn-primary" tabindex="4" disabled>Cancel</button>
+              <button id="btnSave" type="submit" class="btn btn-primary" tabindex="5" disabled>Save</button>
+            </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-1 col-sm-12"></div>
+</div>
+{{end}}
+{{define "hidden"}}
+<form id="formAvatar">
+  <input id="fileAvatar" name="fileAvatar" type="file" accept=".jpg,.jpeg"/>
+</form>
+<input id="avatar" name="avatar" value=""/>
+<input id="language0" value="en"/>
+<input id="darkmode0" value=""/>
+<input id="note0" value=""/>
+{{end}}

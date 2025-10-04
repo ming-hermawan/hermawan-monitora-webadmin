@@ -1,0 +1,120 @@
+#divBody {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+#divInnerBody {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#divLeftBody {
+    min-width: 238px;
+    padding: 0;
+    height: 234px;
+}
+#divRightBody {
+    padding-left: 0;
+    padding-top: 90px;
+    padding-right: 0;
+    padding-bottom: 0;
+    width: 100%
+    margin: 0;
+}
+#divLogo {
+    width: 238px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 18px;
+}
+#divImg {
+    height: 108px;
+    width: 108px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#divImg > img {
+    height: 108px;
+    width: 108px;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 1s;
+}
+#divTxt {
+    font-family: "Comfortaa";
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 18px;
+    float: left;
+    height: 108px;
+    width: 238px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@keyframes example {
+  from {
+      height: 324px;
+      width: 324px;
+      margin-top: -108px;
+      margin-left: -108px;
+      rotate: 180deg;
+      opacity: 0;
+  }
+  to {
+      margin-top: 0px;
+      margin-left: 0px;
+      height: 108px;
+      width: 108px;
+      rotate: 0deg;
+      opacity: 1;
+  }
+}
+#loginFrm .col-md-8 {
+    padding: 0;
+}
+
+
+
+@media (min-width: 382px) {
+  #divLeftBody {
+      min-width: 346px;
+      height: 108px;
+  }
+  #divLogo {
+      width: 346px;
+      text-align: left;
+      padding-bottom: 0;
+  }
+  #divImg {
+      float: left;
+      margin: 0;
+  }
+  #divTxt {
+      float: left;
+      margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #divLeftBody {
+      padding-top: 23px;
+      padding-bottom: 23px;
+      float: left;
+  }
+  #divRightBody {
+      padding-top: 0;
+      padding-left: 0;
+      width: calc(100% - 346px);
+      float: left;
+      margin: 0;
+  }
+  #form-inp {
+      padding: 0;
+      margin: 0;
+  }
+}

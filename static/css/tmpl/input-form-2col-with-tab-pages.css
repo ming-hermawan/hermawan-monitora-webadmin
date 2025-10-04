@@ -1,0 +1,64 @@
+#divInputBox {
+  width: calc(100% - 1px);
+  height: fit-content;
+}
+#divInputBox > div {
+  width: 100%;
+  height: 100%;
+}
+#divInputButton {
+  z-index: 1;
+  margin-top: -1px;
+  position: absolute;
+}
+#divInputButton > button {
+  border: 1px solid #000000;
+  height: 42px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#divImgCloseInput {
+  position: absolute;
+  text-align: right;
+  padding-top: 9px;
+  padding-right: 9px;
+  width: calc(100% - 40px);
+}
+#divInputPage {
+  z-index: 0;
+  width: 100%;
+  padding-top: 51px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+#divInputPageBody {
+    padding: 18px;
+    height: 100%;
+    overflow: auto;
+}
+
+
+@media (min-width: 768px) {
+  #divInputBox {
+    height: calc(100% - 1px);
+  }
+  #divInputButton > button {
+    height: 34px;
+    width: 80px;
+    font-size: 12px;
+  }
+  #frmInp {
+    height: 100%;
+  }
+  #divInputPage {
+    height: 100%;
+  }
+  #divInputPageBody {
+    height: calc(100% - 43px);
+  }
+  #frmInp > .col-12 {
+    padding-top: 9px;
+  }
+}

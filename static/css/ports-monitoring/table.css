@@ -1,0 +1,21 @@
+.div-table-content > table > tbody > tr > th > div {
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #ffffff;
+    height: 38px;
+    width: 100%;
+    padding: 9px;
+    font-size: 12px;
+    background-image: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 50%, #d0d0d0 50%, #e0e0e0 100%);
+    color: #000000;
+    text-align: center;
+}
+.div-table-content > table > tbody > tr > th:nth-child(1) > div {
+    border-left: 0;
+    border-right: 1px solid #ffffff;
+}
+.div-table-content > table > tbody > tr > th:nth-last-child(1) > div {
+    border-left: 1px solid #bfbfbf;
+    border-right: 0;
+}

@@ -1,0 +1,3 @@
+#trHeader > th:nth-child(2) {
+    width: calc(100% - 39px);
+}

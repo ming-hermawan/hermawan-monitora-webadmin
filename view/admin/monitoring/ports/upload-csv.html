@@ -1,0 +1,33 @@
+{{define "head"}}
+  <link rel="stylesheet" href="/static/css/tmpl/base/tbl.css">
+  <link rel="stylesheet" href="/static/css/admin/monitoring/ports/upload-csv.css">
+  <script src="/static/js/admin/monitoring/ports/upload-csv.js"></script>
+{{end}}
+{{define "body"}}
+  <div id="divContent">
+      <form id="formUploadCSV" action="/admin/monitoring/port/upload-csv" method="post" enctype="multipart/form-data">
+        <div id="divInput" class="div-box-out">
+          <div class="div-box-in">
+              <input type="file" id="myFile" name="myFile" class="inp-file"  accept=".csv">
+              <input type="submit" class="btn btn-primary" value="SUBMIT"/>
+          </div>
+        </div>
+      </form>
+      <div class="div-space-18"></div>
+      <div id="divInfo" class="div-tbl">
+        <table>
+          <tbody id="tbodyPorts" class="tbody">
+            <th><div>Table</div></th>
+            <th><div>Key</div></th>
+            <th><div>Status</div></th>
+          </tbody>
+        </table>
+      </div>
+      <div id="divConfirmation">
+          <input type="hidden" id="id"/>
+          <button id="btnConfirm" class="btn btn-primary">CONFIRM</button>
+      </div>
+  </div>
+{{end}}
+{{define "hidden"}}
+{{end}}

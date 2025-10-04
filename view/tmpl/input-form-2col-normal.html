@@ -1,0 +1,29 @@
+{{define "head-form-base"}}
+    <link rel="stylesheet" href="/static/css/tmpl/input-form-2col-normal.css">
+    <script src="/static/js/tmpl/input-form-2col-with-tab-pages.js"></script>
+    {{ template "head-form-normal" . }}
+{{end}}
+{{define "body-inp"}}
+<div class="div-box-out">
+<div class="div-box-in">
+    <div id="divImgCloseInput">
+      <button id="buttonImgCloseInput" class="btn-close-box">
+        <img src="/static/img/icon/icons8-close-24-white.png"/>
+      </button>
+    </div>
+    <div class="div-space-9"></div>
+    <form id="frmInp" class="form-inp">
+        <div id="divMainInput">
+          {{ template "body-form-inp" . }}
+        </div>
+        <div class="col-12">
+            <div id="divInputBtn">
+                <button id="btnCancel" type="button" class="btn btn-primary">Cancel</button>
+                <button id="btnSave" type="submit" class="btn btn-primary">Save</button>
+            </div>
+            <div id="divInputMessage"></div>
+        </div>
+    </form>
+</div>
+</div>
+{{end}}

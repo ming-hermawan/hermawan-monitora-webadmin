@@ -1,0 +1,32 @@
+#divContent {
+    padding-top: 18px;
+    padding-left: 18;
+    padding-bottom: 18px;
+    padding-right: 18;
+    height: 100%;
+    width: 100%;
+}
+#divInfo {
+    height: calc(100% - 148px);
+    overflow: auto;
+}
+#divConfirmation {
+    padding-left: 0px;
+    padding-top: 18px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    height: 52px;
+    text-align: right;
+}
+@media (min-width: 768px) {
+    #divContent {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+@media (min-width: 1200px) {
+    #divContent {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}

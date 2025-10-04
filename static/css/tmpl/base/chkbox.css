@@ -1,0 +1,98 @@
+/* The container */
+.h-inp-chkbox {
+    margin: 0;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 35px;
+    padding-right: 0px;
+    font-size: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.h-inp-chkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.h-inp-chkbox .checkmark {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  height: 18px;
+  width: 18px;
+  background-color: #f7f7f7;
+  border: 1px solid #bfbfbf;
+  border-radius: 12px;
+}
+.h-inp-chkbox .checkmark > img {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  margin-left: 0px;
+  margin-top: -5px;
+}
+.h-inp-chkbox input ~ .checkmark > img {
+  display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.h-inp-chkbox:hover input ~ .checkmark {
+  border: 1px solid #800000;
+}
+.h-inp-chkbox:hover input:checked ~ .checkmark {
+  background-color: #ffffff;
+  border: 1px solid #800000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.h-inp-chkbox input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+.h-inp-chkbox input:checked ~ .checkmark > img {
+  display: block;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.h-inp-chkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.h-inp-chkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.h-inp-chkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+@media (min-width: 768px) {
+  .h-inp-chkbox {
+      font-size: 12px;
+      height: 32px;
+  }
+}

@@ -1,0 +1,9 @@
+#divPageMenus {
+    margin-left: -35px;
+}
+#divPageMenus li {
+    padding-left: 35px !important;
+}
+#trHeader > th:nth-child(2) {
+    width: calc(100% - 39px);
+}

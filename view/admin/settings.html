@@ -1,0 +1,70 @@
+{{define "head-form-base"}}
+    <link rel="stylesheet" href="/static/css/admin/settings.css">
+    <link rel="stylesheet" href="/static/css/tmpl/base/chkbox.css">
+    <script src="/static/js/admin/settings.js"></script>
+{{end}}
+{{define "sub-title"}}{{end}}
+{{define "body-inp"}}
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <label class="h-inp-chkbox" for="forceStrongPassword">Force Strong Password
+              <input class="h-inp " type="checkbox" id="forceStrongPassword" value="0"/>
+             <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+          </label>
+        </div>
+        <div class="row">
+          <label class="h-inp-chkbox" for="logoutAfter1Hour">Logout After 1 Hour
+              <input class="h-inp " type="checkbox" id="logoutAfter1Hour" value="0"/>
+              <span class="checkmark"><img src="/static/img/icon/icons8-done-24.png"/></span>
+          </label>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="col-12 div-header">Email</div>
+        <div class="row">
+            <label class="lbl col-md-4" for="smtphost">SMTP Host{{$.SmtpHost}}</label>
+            <div class="col-md-8 col-sm-12">
+              <input class="h-inp" type="text" id="smtphost" tabindex="1"/>
+            </div>
+        </div>
+        <div class="row">
+            <label class="lbl col-md-4" for="smtpport">SMTP Port{{.SmtpPort}}</label>
+            <div class="col-md-8 col-sm-12">
+              <input class="h-inp" type="number" id="smtpport" tabindex="2"/>
+            </div>
+        </div>
+        <div class="row">
+            <label class="lbl col-md-4" for="sendername">Sender Name{{.SenderName}}</label>
+            <div class="col-md-8 col-sm-12">
+              <input class="h-inp" type="text" id="sendername" tabindex="3" value="{{.SenderName}}"/>
+            </div>
+        </div>
+        <div class="row">
+            <label class="lbl col-md-4" for="authemail">Authentication Email{{.AuthEmail}}</label>
+            <div class="col-md-8 col-sm-12">
+              <input class="h-inp" type="email" id="authemail" tabindex="4" value="{{.AuthEmail}}"/>
+            </div>
+        </div>
+        <div class="row">
+            <label class="lbl col-md-4" for="authpassword">Authentication Password{{.AuthPassword}}</label>
+            <div class="col-md-8 col-sm-12">
+              <input class="h-inp" type="text" id="authpassword" tabindex="5" value="{{.AuthPassword}}"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12 div-btn">
+    <button type="button" id="btnCancel" class="btn btn-primary" disabled>CANCEL</button>
+    <button type="submit" id="btnSave" class="btn btn-primary" disabled>SAVE</button>
+</div>
+{{end}}
+{{define "hidden"}}
+<input id="forceStrongPassword0"/>
+<input id="logoutAfter1Hour0"/>
+<input id="smtphost0"/>
+<input id="smtpport0"/>
+<input id="sendername0"/>
+<input id="authemail0"/>
+<input id="authpassword0"/>
+{{end}}

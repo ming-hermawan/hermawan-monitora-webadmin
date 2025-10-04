@@ -1,0 +1,99 @@
+#divInnerBody {
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+}
+#divMainBox {
+    width: 100%;
+}
+#divInput .lbl {
+    float: left;
+    width: 60px;
+}
+#divInput .div-inp-date{
+    float: left;
+    width: calc(100% - 60px);
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 9px;
+}
+#divInput .div-submit {
+    width: 100%;
+    text-align: right;
+}
+
+#divNote {
+    padding-top: 18px;
+    width: 100%;
+    color: #ff0000;
+    text-align: center;
+}
+
+.ui-datepicker {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 9px;
+    font-size: 20px;
+    width: 250px;
+}
+.ui-datepicker table {
+    width: 100%;
+}
+.ui-datepicker-prev {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 9px;
+    padding-bottom: 0;
+}
+.ui-datepicker-next {
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+}
+
+.inp-date {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .ui-datepicker {
+        font-size: 12px;
+        width: 200px;
+    }
+    #divMainBox {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #divInput {
+        width: 400px;
+    }
+    #divInput .lbl {
+        font-size: 12px;
+        width: fit-content;
+    }
+    #divInput .div-from {
+        width: 30px;
+    }
+    #divInput .div-to {
+        width: 14px;
+    }
+    #divInput .div-inp-date {
+        font-size: 12px;
+        width: fit-content;
+        padding-left: 9px;
+        padding-top: 0;
+        padding-right: 9px;
+        padding-bottom: 0;
+    }
+    .inp-date {
+        width: 120px;
+    }
+    #divInput .div-submit {
+        float: left;
+        width: fit-content;
+    }
+}

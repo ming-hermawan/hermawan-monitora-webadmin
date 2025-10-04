@@ -1,0 +1,83 @@
+.btn {
+    background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+    color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #bfbfbf;
+}
+.btn:disabled {
+    background: #7f7f7f;
+    color: #ffffff;
+    border: 1px solid #bfbfbf;
+}
+.btn-primary {
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 46px;
+    width: 120px;
+    border: 1px solid #bfbfbf;
+}
+.btn-big {
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 46px;
+    width: 120px;
+    border: 1px solid #bfbfbf;
+}
+.btn-icon {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    height: 36px;
+    width: 36px;
+    padding: 4px;
+}
+.btn-disabled {
+    border: 1px solid #ffffff;
+    background: #f0f0f0;
+}
+
+
+.btn-close-box {
+    border: 1px solid #bfbfbf;
+    border-radius: 19px;
+}
+.btn-close-box > img {
+    background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+    border-radius: 18px;
+    padding: 6px;
+    height: 36px;
+    width: 36px;
+}
+
+
+
+.div-btn {
+    text-align: center;
+    width: 100%;
+    padding-top: 18px;
+}
+
+
+
+@media (min-width: 768px) {
+  .btn:hover {
+      background: #800000;
+      color: #ffffff;
+      border: 1px solid #bfbfbf;
+  }
+  .btn-primary {
+      font-size: 12px;
+      height: 34px;
+      width: 80px;
+  }
+  .btn-big {
+      font-size: 12px;
+      height: 50px;
+      width: 80px;
+  }
+    .div-btn {
+        text-align: right;
+        width: 100%;
+    }
+}

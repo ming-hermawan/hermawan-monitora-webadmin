@@ -1,0 +1,122 @@
+{{define "head-form-with-tab-pages"}}
+<link rel="stylesheet" href="/static/css/tmpl/filter/group.css">
+<link rel="stylesheet" href="/static/css/admin/monitoring/ports/server-n-ports.css">
+<script src="/static/js/tmpl/filter/group.js"></script>
+<script src="/static/js/admin/monitoring/ports/server-n-ports.js"></script>
+{{end}}
+{{define "body-form-inp-button"}}
+<button data-page="divPagePorts" class="btn">Ports</button>
+<button data-page="divPageAlert" class="btn">Alert</button>
+{{end}}
+{{define "body-form-inp-page-main"}}
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="ip">IP</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="text"
+                 id="ip"
+                 class="h-inp h-inp-text"
+                 pattern="\d{1,3}\x2E\d{1,3}\x2E\d{1,3}\x2E\d{1,3}"
+                 title="IP"
+          />
+        </div>
+    </div>
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="name">Name</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="text"
+                 id="name"
+                 class="h-inp h-inp-text"
+                 pattern="[A-Za-z0-9\x2D]*"
+                 title="Allowed characters are alphabetic, digit, or hyphen(-)"
+          />
+        </div>
+    </div>
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="servergroup">Group</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <select class="form-select h-inp" id="group" name="group"></select>
+        </div>
+    </div>
+
+{{end}}
+{{define "body-form-inp-page"}}
+<div id="divPagePorts" class="div-page-tbl">
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="port">Port</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="number"
+                 id="port"
+          />
+        </div>
+    </div>
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="port">Service</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input type="text"
+                 id="service"
+          />
+        </div>
+    </div>
+    <div class="div-btn-add">
+        <button id="btnAddPort" class="btn btn-icon" type="button">
+          <img src="/static/img/icon/icons8-plus-math-24.png"/>
+        </button>
+    </div>
+    <div id="divTbPorts" class="div-box-tbl">
+      <table>
+        <tbody id="tbodyPorts" class="tbody tbody-in-tab">
+            <tr>
+                <th class="th-chk-box"><div></div></th>
+                <th id="thPort"><div>Port</div></th>
+                <th id="thServerName"><div>Server Name</div></th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="div-btn-del">
+        <button id="btnDelPort" class="btn btn-icon" type="button">
+          <img src="/static/img/icon/icons8-subtract-24.png"/>
+        </button>
+    </div>
+</div>
+<div id="divPageAlert" class="div-page-tbl">
+    <div class="row">
+        <label class="lbl col-lg-4 col-md-5 col-sm-12" for="emailalert">Email</label>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <input id="email"
+                 class="h-inp h-inp-text"
+                 type="email"
+          />
+        </div>
+    </div>
+    <div id="divBtnAddEmail" class="div-btn-add">
+        <button id="btnAddEmail" class="btn btn-icon h-btn-inp" type="button">
+          <img src="/static/img/icon/icons8-plus-math-24.png"/>
+        </button>
+    </div>
+    <div id="divTblEmails" class="div-box-tbl">
+      <table>
+        <tbody id="tbodyEmails" class="tbody tbody-in-tab">
+            <tr>
+                <th class="th-chk-box"><div></div></th>
+                <th id="thEmail"><div>Email</div></th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="div-btn-del">
+        <button id="btnDelEmail" class="btn btn-icon h-btn-inp" type="button">
+          <img src="/static/img/icon/icons8-subtract-24.png"/>
+        </button>
+    </div>
+</div>
+{{end}}
+{{define "input-form-2col-base-hidden"}}
+<input id="inpPorts" value=""/>
+<input id="inpEmails" value=""/>
+<input id="ip0"/>
+<input id="name0"/>
+<input id="group0"/>
+<input id="ports0"/>
+<input id="emails0"/>
+{{end}}

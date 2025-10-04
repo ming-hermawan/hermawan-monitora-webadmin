@@ -1,0 +1,181 @@
+#divOuterLayer {
+    display: none;
+    height: calc(100% - 39px);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 39px;
+}
+.div-back-header {
+    background: #3f3f3f;
+    width: 100%;
+    margin: 0px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    position: fixed;
+    height: 39px;
+    z-index: 0;
+}
+.div-menu-area {
+    width: 100%;
+    margin: 0px;
+    padding-left: 18px;
+    padding-right: 18px;
+    position: fixed;
+}
+
+
+
+.div-menu-area .div-main-button {
+    position: absolute;
+    background-image: linear-gradient(to bottom, #7f7f7f 0%, #3f3f3f 50%, #000000 50%, #3f3f3f 100%);
+    border-top: 1px solid #000000;
+    border-left: 1px solid #3f3f3f;
+    border-right: 1px solid #000000;
+    height: 39px;
+}
+.div-menu-area .div-main-button-hover {
+    position: absolute;
+    background-color: #000000;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    height: 39px;
+    z-index: 3;
+}
+.div-icon-menu-area > .div-menu-button {
+    padding: 6.5px;
+    width: 39px;
+    margin-left: 0px;
+}
+.div-icon-menu-area > .div-menu-button > image {
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+.div-profile-sub-menu {
+    margin-left: 0px;
+    width: 120px;
+}
+
+.div-text-menu-area > .div-menu-button {
+    padding: 9px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+.div-config-sub-menu {
+    width: 120px;
+}
+.div-config-sub-menu .div-sub-sub-menu {
+    margin-left: 119px;
+}
+.div-monitoring-sub-menu {
+    width: 120px;
+}
+.div-sub-menu-button {
+    z-index: 2;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.div-sub-menu-button > li > .div-label {
+    padding: 9px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    height: 36px;
+}
+.div-sub-menu-button > li:first-child > .div-label {
+  border-top: 1px solid #ffffff;
+}
+.div-sub-menu-button > li:last-child > .div-label {
+  border-bottom: 1px solid #ffffff;
+}
+.div-sub-menu-button > li > .div-label:hover {
+    background-color: #3f3f3f;
+}
+.div-sub-menu-button a {
+    color: #ffffff;
+    font-size: 12px;
+}
+.div-hover-menu {
+    display: none;
+    position: absolute;
+}
+#divOuterLayer > .div-menu-area > .div-main-button {
+    position: absolute;
+}
+#divOuterLayer > .div-menu-area > .div-hover-menu-area {
+    position: absolute;
+    display: none;
+    margin-top: -39px;
+}
+#divOuterLayer > .div-menu-area > .div-hover-menu-area >  .div-sub-area-level-1 {
+    margin-top: 38px;
+}
+
+
+
+#divHoverProfileMenu {
+    margin-left: 0px;
+}
+#divHoverMenuConfig {
+    margin-left: 39px;
+}
+#divHoverMenuMonitoring {
+    margin-left: 139px;
+}
+
+.div-profile-menu-area {
+    margin-left: 0px;
+}
+.div-config-menu-area {
+    margin-left: 39px;
+}
+.div-monitoring-menu-area {
+    margin-left: 139px;
+}
+
+
+
+.div-space-first {
+    height: 32px;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .div-menu-area {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+@media (min-width: 1200px) {
+    .div-menu-area {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+
+
+.div-sub-menu-area > .div-sub-menu-button {
+    margin-left: 0px;
+}
+.div-sub-menu-area > .div-sub-sub-menu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    z-index: 4;
+}
+.div-sub-menu-area:hover > .div-sub-sub-menu {
+    display: block;
+}
+.div-sub-area-level-1 > .div-sub-menu-button > li > .div-label {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+}
+.div-sub-sub-menu > .div-sub-menu-button > li > .div-label {
+    border-right: 1px solid #ffffff;
+}

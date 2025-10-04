@@ -1,0 +1,64 @@
+.div-filter-label {
+    font-size: 20px;
+    min-width: 90px;
+    float: left;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+.div-filter-inp {
+    font-size: 20px;
+    height: 44px;
+    min-width: 180px;
+    width: 100%;
+    float: left;
+}
+.div-filter-inp > select {
+    font-size: 20px;
+    height: 44px;
+    width: 100%;
+}
+.div-filter-inp > input {
+    font-size: 20px;
+    height: 44px;
+    width: 100%;
+}
+@media (min-width: 346px) {
+    .div-filter-label {
+        height: 28px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .div-filter-inp {
+        width: calc(100% - 90px);
+    }
+}
+@media (min-width: 768px) {
+    .div-filter-label {
+        width: 100%;
+        clear: both;
+        width: 100px;
+        font-size: 12px;
+        height: 18px;
+        padding-left: 0;
+        padding-top: 0px;
+        padding-right: 0;
+        padding-bottom: 0px;
+    }
+    .div-filter-inp {
+        font-size: 12px;
+        width: 100%;
+        clear: both;
+    }
+    .div-filter-inp > select {
+        font-size: 12px;
+        height: 32px;
+        width: 100%;
+    }
+    .div-filter-inp > input {
+        font-size: 12px;
+        height: 32px;
+        width: 100%;
+    }
+}

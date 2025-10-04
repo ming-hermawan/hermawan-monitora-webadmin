@@ -1,0 +1,84 @@
+{{ define "header" }}
+<div class="div-header">
+    <div class="div-back-header"></div>
+    <div class="div-menu-area">
+        <div class="div-icon-menu-area div-profile-menu-area">
+            <div class="div-menu-button div-main-button" onmouseover="on_mouse_over_profile_menu()">
+                <img src="/static/img/icon/icons8-male-user-24.png"></img>
+            </div>
+        </div>
+        <div class="div-text-menu-area div-config-menu-area">
+            <div class="div-menu-button div-main-button" onmouseover="on_mouse_over_config_menu()">Admin</div>
+        </div>
+        <div class="div-text-menu-area div-monitoring-menu-area">
+            <div class="div-menu-button div-main-button" onmouseover="on_mouse_over_monitoring_menu()">Monitoring</div>
+        </div>
+    </div>
+    <div class="div-clear"></div>
+</div>
+<div id="divOuterLayer">
+    <div class="div-menu-area">
+        <div class="div-hover-menu-area div-icon-menu-area div-profile-menu-area" id="divHoverProfileMenu" onmouseleave="on_mouse_leave_menu()">
+            <div class="div-menu-button div-main-button-hover">
+                <img src="/static/img/icon/icons8-male-user-24.png"></img>
+            </div>
+            <div class="div-sub-area-level-1 div-profile-sub-menu">
+                <ul class="div-sub-menu-button">
+                  <li>
+                    <div class="div-label"><a href="/profile">Profile</a></div>
+                  </li>
+                  <li>
+                    <div class="div-label"><a href="/change-password">Change Password</a></div>
+                  </li>
+                  <li>
+                    <div class="div-label"><a href="/logout">Logout</a></div>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-hover-menu-area div-text-menu-area div-config-menu-area" id="divHoverMenuConfig" onmouseleave="on_mouse_leave_menu()">
+            <div class="div-menu-button div-main-button-hover">Admin</div>
+            <div class="div-sub-area-level-1 div-config-sub-menu">
+                <ul class="div-sub-menu-button">
+                  <li>
+                    <div class="div-label">Users</div>
+                  </li>
+                  <li class="div-sub-menu-area">
+                    <div class="div-sub-sub-menu">
+                        <ul class="div-sub-menu-button">
+                          <li class="div-sub-menu-area">
+                            <div class="div-sub-sub-menu">
+                                <ul class="div-sub-menu-button">
+                                  <li>
+                                    <div class="div-label">Settings</div>
+                                  </li>
+                                  <li>
+                                    <div class="div-label">Server Groups</div>
+                                  </li>
+                                  <li>
+                                    <div class="div-label">Servers & Ports</div>
+                                  </li>
+                                </ul>
+                            </div>
+                            <div class="div-label">Ports</div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="div-label">Monitoring</div>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-hover-menu-area div-text-menu-area div-monitoring-menu-area" id="divHoverMenuMonitoring" onmouseleave="on_mouse_leave_menu()">
+            <div class="div-menu-button div-main-button-hover">Monitoring</div>
+            <div class="div-sub-area-level-1 div-monitoring-sub-menu">
+                <ul class="div-sub-menu-button">
+                  <li>
+                    <div class="div-label"><a href="/monitoring/ports">Ports</a></div>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

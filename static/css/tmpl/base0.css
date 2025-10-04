@@ -1,0 +1,216 @@
+#divModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: false;
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+    animation-name: anim_uisDivModalBackShow;
+    animation-duration: 1s;
+    perspective: 1000px;
+}
+@keyframes anim_uisDivModalBackShow {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#divModalFront {
+  position: absolute;
+  display: none;
+  top: 0px;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  z-index: 0;
+}
+#divModalAlert {
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
+  height: 500px;
+  max-width: 500px;
+  padding: 16px;
+  background-color: #f0f0f0;
+  transform: rotateY(-90deg);
+  border-radius: 9px;
+}
+#divModalAlertTitle {
+  font-size: 24px;
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  max-width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  height: 54px;
+}
+#divModalAlertMessage {
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 348px;
+  border-radius: 5px;
+}
+#divModalAlertFootnote {
+  text-align: center;
+  max-width: 100%;
+  font-size: 14px;
+  color: #800000;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 36px;
+}
+#divModalAsk {
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
+  height: 250px;
+  width: 500px;
+  padding: 16px;
+  background-color: #f0f0f0;
+  transform: rotateY(-90deg);
+  border-radius: 9px;
+}
+#divModalAskTitle {
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  max-width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  height: 42px;
+}
+#divModalAskMessage {
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 108px;
+  border-radius: 5px;
+}
+#divModalAskButton {
+  text-align: center;
+  max-width: 100%;
+  font-size: 12px;
+  color: #800000;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 52px;
+}
+#divModalAbout {
+  border: 1px solid #000000;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 50px;
+  padding: 18px;
+  background-color: #f0f0f0;
+  transform: rotateY(-90deg);
+  border-radius: 9px;
+}
+#divModalAboutHeader {
+  font-size: 36px;
+  padding: 9px;
+}
+#divModalAboutBody {
+    padding: 9px;
+    text-align: justify;
+    font-size: 20px;
+}
+#divModalAboutFooter {
+    padding: 9px;
+    text-align: justify;
+    font-size: 20px;
+    color: #800000;
+}
+#divModalAboutFooter > b {
+    background-color: #000000;
+    color: #ffff00;
+}
+#divHidden {
+    display: none;
+}
+
+
+
+.inp-file {
+    height: 40px;
+}
+.inp-file::file-selector-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #bfbfbf;
+    padding-left: 9px;
+    padding-top: 3px;
+    padding-right: 9px;
+    padding-bottom: 3px;
+    border-radius: 3px !important;
+    margin-right: 9px;
+}
+.inp-file::file-selector-button:disabled {
+    background: #7f7f7f;
+    color: #ffffff;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+}
+@media (min-width: 768px) {
+  #divModalAlert {
+      margin-left: auto;
+      margin-right: auto;
+      height: 250px;
+      max-width: 500px;
+  }
+  #divModalAlertTitle {
+      font-size: 16px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      border-radius: 5px;
+      height: 42px;
+  }
+  #divModalAlertMessage {
+      font-size: 12px;
+      height: 122px;
+  }
+  #divModalAlertFootnote {
+      font-size: 12px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      height: 36px;
+  }
+  #divModalAbout {
+    margin-left: auto;
+    margin-right: auto;
+    height: 238px;
+    width: 500px;
+  }
+  #divModalAboutHeader {
+    font-size: 28px;
+    height: 60px
+  }
+  #divModalAboutBody {
+    font-size: 12px;
+    height: 53px;
+  }
+  #divModalAboutFooter {
+    font-size: 12px;
+    height: 89px;
+  }
+}

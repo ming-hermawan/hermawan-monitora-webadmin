@@ -1,0 +1,36 @@
+#divInput > div {
+    width: calc(100% - 1px);
+    height: fit-content;
+}
+#divInput > div {
+    height: fit-content;
+}
+#divInput > div > div {
+    height: fit-content;
+}
+#frmInp {
+    height: fit-content;
+}
+#divImgCloseInput {
+    text-align: right;
+}
+#divMainInput {
+    height: fit-content;
+}
+@media (min-width: 768px) {
+  #divInput > div {
+      height: 100%;
+  }
+  #divInput > div {
+      height: 100%;
+  }
+  #divInput > div > div {
+      height: 100%;
+  }
+  #frmInp {
+      height: 100%;
+  }
+  #divMainInput {
+      height: calc(100% - 43px);
+  }
+}

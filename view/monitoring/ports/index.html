@@ -1,0 +1,55 @@
+{{define "head"}}
+  <link rel="stylesheet" href="/static/css/tmpl/base/tbl.css">
+  <link rel="stylesheet" href="/static/css/ports-monitoring/filter.css">
+  <link rel="stylesheet" href="/static/css/ports-monitoring/table.css">
+  <link rel="stylesheet" href="/static/css/status-ports.css">
+  <script src="/static/js/status-ports.js"></script>
+{{end}}
+{{define "body"}}
+  <div id="divFilter">
+    <div  class="div-box-out">
+    <div class="div-box-in">
+      <form id="filterFrm" method="post">
+          <div class="row">
+              <div class="col-md-4 col-sm-12">
+                  <div class="div-filter-label">Group</div>
+                  <div class="div-filter-inp">
+                    <select id="groupServer" name="group-server"></select>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                  <div class="div-filter-label">Server</div>
+                  <div class="div-filter-inp">
+                    <input type="text" id="serverKeyword" name="server-keyword"/>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                  <div class="div-filter-label">Service</div>
+                  <div class="div-filter-inp">
+                    <input type="text" id="serviceKeyword" name="service-keyword"/>
+                  </div>
+              </div>
+          </div>
+          <input type="submit" class="btn btn-big" value="FIND"/>
+          <div class="div-clear"></div>
+      </form>
+    </div>
+    </div>
+  </div>
+  <div id="divTbl">
+    <div class="div-tbl">
+      <table>
+        <tbody id="tbodyContent" class="tbody">
+          <tr>
+            <th class="thd-server-left"><div>Server</div></th>
+            <th class="thd-port"><div>Port</div></th>
+            <th class="thd-status"><div>Status</div></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="div-space-last"></div>
+{{end}}
+{{define "hidden"}}
+{{end}}
