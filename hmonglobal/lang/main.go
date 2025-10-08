@@ -2,6 +2,7 @@ package lang
 
 import (
     "fmt"
+    "strings"
 )
 
 const InternalServerWebError = "Internal Server Error"
@@ -81,6 +82,12 @@ func GetRedisErrTitle(lbl string) string {
     return fmt.Sprintf(
       "Error read %s from Redis!",
       lbl)
+}
+
+func UsedCannotBeDeleted(groups []string) string {
+    return fmt.Sprintf(
+      "%s is used, so it can't be deleted!",
+      strings.Join(groups, ","))
 }
 
 func SetRedisErrTitle(lbl string) string {

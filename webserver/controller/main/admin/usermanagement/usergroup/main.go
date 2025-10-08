@@ -5,6 +5,7 @@ import (
     "net/http"
     "gorm.io/gorm"
     "hermawan-monitora/hmonglobal"
+    "hermawan-monitora/hmonglobal/lang"
     dbo "hermawan-monitora/module/hmondb/hmondbsqlite"
     "hermawan-monitora/webserver/decorator"
     "hermawan-monitora/webserver/module/html"
@@ -201,10 +202,18 @@ func del(w http.ResponseWriter, r *http.Request) {
         return
     }
     var err error
+    var isUsed bool
     tx := db.Begin()
-    err = dbo.DelUserGroups(db, usergroups)
-    if err != nil {
+    isUsed, err = dbo.DelUserGroups(db, usergroups)
+    if isUsed || (err != nil) {
         tx.Rollback()
+        if isUsed {
+            http.Error(
+              w,
+              lang.UsedCannotBeDeleted(usergroups),
+              http.StatusInternalServerError)
+            return
+        }
         httpresponse.ErrResponseWhenDelDb(
           w,
           "user_groups",

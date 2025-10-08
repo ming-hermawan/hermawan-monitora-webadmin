@@ -1,7 +1,6 @@
 package hmondbsqlite
 
 import (
-  "errors"
   "fmt"
   "gorm.io/gorm"
 )
@@ -131,31 +130,30 @@ func UpdUserGroup(db *gorm.DB,
 }
 
 func DelUserGroups(db *gorm.DB,
-                   usergroups []string) error {
+                   usergroups []string) (bool, error) {
     var err error
     var isUserGroupUsedInServers bool
     isUserGroupUsedInServers, err = IsUserGroupUsedInUsers(db, usergroups)
     if err != nil {
-        return err
+        return false, err
     }
     if isUserGroupUsedInServers {
-        return errors.New(
-          fmt.Sprintf("%s is used, so it can't be deleted"))
+        return true, nil
     }
     var userGroups []UserGroup
     err = db.Where(
       "user_group in (?)",
       userGroups).Find(&userGroups).Error;
     if err != nil {
-        return err
+        return false, err
     }
     dbResult := db.Where(
       "user_group in (?)",
       usergroups).Delete(&userGroups)
     if dbResult.Error != nil {
-        return dbResult.Error
+        return false, dbResult.Error
     }
-    return nil
+    return false, nil
 }
 
 func DelUserGroupMenus(db *gorm.DB, usergroups []string) error {

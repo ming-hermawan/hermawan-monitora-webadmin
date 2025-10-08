@@ -141,25 +141,25 @@ func UpdMPServerGroup(db *gorm.DB,
 }
 
 
-func DelMPServerGroups(db *gorm.DB, servergroups []string) error {
+func DelMPServerGroups(db *gorm.DB, servergroups []string) (bool, error) {
     isServerGroupUsedInServers, err := IsServerGroupUsedInServers(servergroups)
     if err != nil {
-        return err
+        return false, err
     }
     if isServerGroupUsedInServers {
-        return errors.New("Can't be deleted")
+        return true, nil
     }
     var serverGroups []MPServerGroup
     if err := db.Where(
       "server_group in (?)",
       servergroups).Find(&serverGroups).Error; err != nil {
-        return err
+        return false, err
     }
     result := db.Where(
       "server_group in (?)",
       servergroups).Delete(&serverGroups)
     if result.Error != nil {
-        return result.Error
+        return false, result.Error
     }
-    return nil
+    return false, nil
 }

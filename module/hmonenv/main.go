@@ -329,6 +329,10 @@ func init() {
     sqliteDbFilePath = os.Getenv("SQLITE_DB_FILEPATH")
     _, err = os.Stat(sqliteDbFilePath)
     if err != nil {
-        panic(fmt.Sprintf("%s file is not exists!", sqliteDbFilePath))
+	time.Sleep(1 * time.Minute)
+        _, err = os.Stat(sqliteDbFilePath)
+        if err != nil {
+            panic(fmt.Sprintf("%s file is not exists!", sqliteDbFilePath))
+        }
     }
 }
